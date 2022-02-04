@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--<link rel="stylesheet" href="style.css"> 외부 스타일시트 연결-->
+
+     <style>
+          
+                       /*  스타일시트 안에 주석 넣으려면 이걸 쓰자! */
+       body{
+           color: #ffffff;  /*헥사코드로 표현 가능*/
+       }
+           h1.first{
+               background-color: rgb(222,000,000);
+               width: 300px;
+               height: 100px;
+               text-align: center;
+           }
+           h1.second{
+               background-color: hsl(70, 55, 40);
+               text-align: right;
+           }
+           h1.third{
+               background-color: blue;
+               text-align: left;
+           }
+           p.first{
+               background-color: cyan;
+               width: 300px;
+               height: 100px;
+           }
+           p.second{
+               background-color: magenta;
+           }
+           p.third{
+               background-color: yellow;
+           }
+
+       
+       .fst,.sed{
+            color: black;
+       }
+       .fst{
+           background-color: blue;
+           width: 300px;
+           height: 100px;
+       }
+       .sed{
+        background-color: red;
+           width: 300px;
+           height: 100px;
+       }
+    </style>   <!--내부 스타일시트 사용 -->
+
+</head>
+<body>
+    <a href="exercise2.html">Home</a>
+    <h1 style="color:red;">Hello World</h1> <!--인라인 요소에 직접 사용-->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+    </p>
+
+    <h1 class="first">Hello world</h1>
+    <p class="first">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+    </p>
+
+    <h1 class="second">Hello world</h1>
+    <p class="second">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+    </p>
+
+    <h1 class="third">Hello world</h1>
+    <p class="third">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+    </p>
+
+    <h2 class="fst"> 스타일</h2>
+    <h2 class="sed"> 시트</h2>
+
+</body>
+</html>
