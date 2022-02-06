@@ -1,0 +1,23 @@
+.contents{
+    background-color: rgb(233, 233, 233);
+  width: 500px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 20px;
+  text-size-adjust: 5px;
+
+  
+
+  
+}
+ol {
+    counter-reset: item;
+  }
+  li {
+    display: block;
+    /*color: #666666;*/
+  }
+  li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+}
