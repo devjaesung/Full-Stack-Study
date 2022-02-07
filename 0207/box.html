@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+        }
+        .box1{
+            background-color: green;
+        }
+        .box2{
+            border-width: 5px;
+            border-top-color: red;     /*border-color: black red blue yello;   4개 축약: top right bottom left순으로 순서 칠함*/
+            border-bottom-color: bisque;
+            border-left-color: yellow;
+            border-right-color: sandybrown;
+            border-style: dashed;
+        }
+        .box3{
+            border-width: 10px;
+            border-color: blue;
+            border-style: dotted;
+        }
+        .box4{
+            border-radius: 50px; /*50%=circle*/
+            border-width: 5px;
+            border-color: palevioletred;
+            border-style: double;  /*double은 최소 3px 이상*/
+        }
+        .box5{
+            border-top-right-radius: 50px;
+            border-color: red blue green;  /*3개 축약 : top right/left bottom 순으로 칠함             2개 축약: top/bottom left/right 순으로 칠함*/
+            border-width: 10px;
+            border-style: solid;
+        }
+
+        .a{
+            border-bottom: 2px solid black;
+        }
+        .b{
+            border-bottom: 2px dashed black;
+        }
+        .c{
+            border-bottom: 2px dotted black;
+            border-top: 2px dotted blue;
+        }
+        .d{
+            border-left: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div><br><br>
+    <div class="box2"></div><br><br>
+    <div class="box3"></div><br><br>
+    <div class="box4"></div><br><br>
+    <div class="box5"></div><br><br>
+    <p>
+        <span class="a">홍길동</span>
+        <span class="b">홍길순</span>
+        <span class="c">김철수</span>
+        <span class="d">이순이</span>
+    </p>
+</body>
+</html>

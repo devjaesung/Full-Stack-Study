@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables study</title>
+   <style>
+       table, td, th{
+           border: 1px solid #000;
+       }
+       table{
+           width: 10%;
+       }
+   </style>
+</head>
+<body>
+    <!--tr은 가로/ td는 세로/ th는 제목-->
+    <table>
+        <caption>
+            가로
+        </caption>
+        <tr>
+            <td>표</td>
+            <td>표2</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>
+            세로
+        </caption>
+        <tr>
+            <th>표</th>
+        </tr>
+        <tr>
+            <td>표</td>
+        </tr>
+        <tr>
+            <td>표</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>  <!--제목 만드는 태그-->
+            점수
+        </caption>
+        <tr>
+            <th> 이름 </th>
+            <th> 나이 </th>
+            <th> 점수 </th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>25</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td>22</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>30</td>
+            <td>90</td>
+        </tr>
+    </table>
+    
+    <table>
+        <caption>열 병합하기</caption>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+        </tr>
+        <tr>
+            <td colspan="2">c</td>  <!--열 병합하는 명령어-->
+        </tr>
+    </table>
+
+    <table>
+        <caption>행 병합하기</caption> 
+        <tr>
+            <td rowspan="3">a</td> <!--행 병합하기-->
+            <td>b</td>
+        </tr>
+        <tr>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td>d</td>
+        </tr>
+    </table>
+    <table>
+        <caption>EX-1</caption>
+        <tr>
+            <th colspan="2">참가자</th>
+            <th rowspan="2">점수</th>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>19</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>김철수</td>
+            <td>22</td>
+            <td>70</td>
+        </tr>
+
+    </table>
+</body>
+</html>
