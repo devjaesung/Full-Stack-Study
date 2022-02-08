@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form study</title>
+</head>
+<body>
+    <form method="get" action="box-study.html"> <!--action은 전송 버튼 누르면 들어가는 주소-->
+        <div> <!--get은 눈으로 보이는 방식, post는 보이지 않는 내부적인 방식-->
+        <label for="username">이름</label><input type="text" id="username" name="username" value=""> <!--value값을 작성하지 않으면 입력한 값이 value값이 된다-->
+        <label for="password">Password</label><input type="password" id="password" name="pass" value="">
+        <input type="submit" value="전 송"> <!--label에 for로 묶으면 해당 label 누르면 강조되는 기능-->
+        <br><br>
+        </div>
+
+        <!--box안에 label기능-->
+        <div>
+        <input type="text" name="username" placeholder="이름" value=""> 
+        <input type="password" name="pass" placeholder="PW" value="">
+        <input type="submit" value="전 송">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="job1">fullstack developer</label><input type="radio" name="job" id="job1"value="fullstack developer">  <!--radio기능 쓸때 name 통일시키기!-->
+            <label>front-end<input type="radio" name="job" value="front-end developer"></label>
+            <label>back-end<input type="radio" name="job" value="back-end developer"></label>
+            <label>designer<input type="radio" name="job" value="designer" checked></label> <!--radio 하나 미리 선택해주는 기능-->
+        </div>
+
+        <div>
+            <label>폼을 기억함<input type="checkbox" name="val" value="1"></label>
+
+        </div>
+        <div>
+            <label for="cars">자동차를 선택하세요.</label>
+            <select name="cars" size="4" multiple> <!--size로 몇개씩 보이는지 설정,multiple로 여러개 선택-->
+                <option value="volvo">볼보</option>
+                <option value="kia" selected>기아</option> <!--select에서 미리 하나 선택해주는 기능-->
+                <option value="bmw">BMW</option>
+                <option value="fiat">피아트</option>
+                <option value="benz">벤츠</option>
+                <option value="porsche">포르쉐</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="contents" rows="10" cols="30">이곳이 value값</textarea>
+        </div>
+            <input type="submit" value="전 송">
+            <input type="button" value="버 튼">
+            <input type="reset" value="취 소">
+
+            <button type="submit">전 송</button>  <!--input과 기능이 같음, 자주 사용 됨-->
+            
+    </form>
+</body>
+</html>

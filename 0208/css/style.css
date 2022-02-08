@@ -1,0 +1,47 @@
+div{
+    width: 300px;
+    height: 300px;
+}
+.box1{
+    background-color: #f4de11 ;
+    border: #000 1px solid;
+}
+.box2{
+    background-color: #55f214;
+    border: #0f0fef 1px dashed;
+}
+.box3{
+    border-radius: 50%;
+    background-image: url(../../skii.png) ;
+    background-position: center center;
+}
+.box4{
+    background-color: #0606f9;
+    border: #55f214 5px solid;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.box5{
+    background-color: #f4de11;
+    background-image: url(../images/circledot.png);
+    background-repeat: repeat-y; 
+    background-attachment:local;   
+    background-position: center;
+    border-radius: 40px;
+}
+.box6{
+    background-color: #f4de11;
+    background-image: url(../images/circledot.png);
+    background-repeat: repeat-x; 
+    background-attachment:local;   
+    background-position: center;
+    border-radius: 40px;
+}
+.box7{
+    background-color: #f4de11;
+    background-image: url(../images/circledot.png);
+    background-repeat: repeat; 
+    background-attachment:local;   
+    background-position: center;
+    border-radius: 40px;
+}

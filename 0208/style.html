@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-model Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> <!--구글폰트 링크-->
+    <style>
+        
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap'); 스타일시트 안에서 구글폰트 링크*/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+        body{
+           margin: 0; /*기본적으로 웹브라우저는 마진값 8px 갖고있음*/
+           text-align: center;
+           
+        }
+        .box{
+            border: 1px solid #333;
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            margin-bottom: 30px; /*마진값이 중복되면 상쇄됨, 큰 값이 우선권 가짐*/
+            box-sizing: border-box; /*박스사이즈 유지*/
+        }
+        .box2{
+            border: 1px solid #333;
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            /*margin-left: auto;
+            margin-right: auto;*/
+            margin: 50px auto ;
+            text-align: center; /*블럭 박스는 적용되지 않음*/
+        }
+        .box3{
+            border: 1px solid #333;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+
+        }
+        .box4{
+            width: 100%;
+            max-width: 1000px; /*반응형 웹을 위한 값*/
+            height: 400px;
+            background-color: aquamarine;
+            outline: 10px #333 solid;
+            margin: 50px;
+
+            /*폰트 설정*/
+            font-family: 'Courier New', Courier, monospace; /*윈도우 기본폰트 사용*/
+            /*font-family: 'Roboto', sans-serif; 구글폰트 사용 <head>에 링크 걸어서 사용됨*/
+           /*사용자 환경이 각자 다름으로 font-name이 아닌 fonr-family를 사용함*/
+        /*san-serif ,serif,monospace 잘 알아두기!*/
+           
+           font-style: normal; /*italic, oblicue  --><i>태그를 대체해서 쓰임 */
+            
+            font-weight: normal; /*normal,bold,bolder,  300 400 500 ...900 */
+            font-variant: small-caps; /*small-caps,normal*/
+            font-size: 16px;
+
+        }
+
+        .box5{
+            width: 100%;
+            max-width: 1000px;
+            border: 1px solid salmon;
+            margin: auto;
+            font-family: 'Quintessential', cursive; /*구글폰트*/
+           /*font-face로 웹폰트 사용가능, 무료&유료 폰트 주의하기*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Hello World!
+    </div>
+    <div class="box2">
+        <h1>HTML</h1>
+        Hello World!
+    </div>
+   
+    <span class="box3">  <!--인라인 박스는 text-align으로 가운데 오지만 블럭 박스는 불가-->
+        <!--inline box는 margin값에 영향을 받지 않음. https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model 참고!-->
+        Hello World!
+    </span>
+    
+    <div class="box4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque laoreet odio, tempor aliquam arcu tempor sit amet. Suspendisse faucibus ipsum sit amet nulla sagittis gravida. Nunc non eleifend orci, id mattis turpis. Nam finibus suscipit leo, tincidunt finibus nisl bibendum ut. Ut cursus, lorem a faucibus posuere, quam risus mattis metus, et mollis elit ipsum sit amet metus. Curabitur varius nulla ac vulputate malesuada. Curabitur in urna elit. Sed vestibulum, leo vel consequat commodo, lorem nisi tincidunt dui, ut luctus quam sem hendrerit velit. Donec massa massa, hendrerit condimentum tincidunt non, rhoncus non lectus. Sed faucibus sodales sem at faucibus. Sed est risus, ultrices non turpis nec, tincidunt tempus lacus. Vestibulum commodo lacus ac odio tempus, sed interdum odio lacinia. Mauris consectetur eros sit amet quam luctus eleifend. In hac habitasse platea dictumst. Sed tempor massa enim.
+    </div>
+
+    <div class="box5">
+        <h1>Favorite Font</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque laoreet odio, tempor aliquam arcu tempor sit amet. Suspendisse faucibus ipsum sit amet nulla sagittis gravida. Nunc non eleifend orci, id mattis turpis. Nam finibus suscipit leo, tincidunt finibus nisl bibendum ut. Ut cursus, lorem a faucibus posuere, quam risus mattis metus, et mollis elit ipsum sit amet metus. Curabitur varius nulla ac vulputate malesuada. Curabitur in urna elit. Sed vestibulum, leo vel consequat commodo, lorem nisi tincidunt dui, ut luctus quam sem hendrerit velit. Donec massa massa, hendrerit condimentum tincidunt non, rhoncus non lectus. Sed faucibus sodales sem at faucibus. Sed est risus, ultrices non turpis nec, tincidunt tempus lacus. Vestibulum commodo lacus ac odio tempus, sed interdum odio lacinia. Mauris consectetur eros sit amet quam luctus eleifend. In hac habitasse platea dictumst. Sed tempor massa enim.</p>
+
+<p>Mauris eu lacinia ante, vitae porta arcu. Nullam scelerisque ante a tempor vehicula. Duis hendrerit, velit ac ornare vehicula, tortor magna fermentum leo, sit amet viverra tortor enim sed sapien. Nam vitae vestibulum augue, in tempor risus. Duis urna urna, mollis non sodales nec, pharetra id ipsum. In cursus dictum odio sodales euismod. Nunc pulvinar odio vitae tempus suscipit. Suspendisse volutpat dapibus dui, ac tempor ex maximus vel. Aenean dolor mauris, efficitur non ornare non, ullamcorper ut sapien.</p>
+
+<p>In egestas, leo vitae ornare imperdiet, tellus velit laoreet odio, a placerat ante orci id justo. Donec dapibus eros quis tellus laoreet, a consequat ante gravida. Maecenas molestie elit sed justo porta auctor. In quis lorem tincidunt, dignissim justo eu, imperdiet nunc. Pellentesque eget scelerisque orci. Proin vel accumsan erat. Vivamus ullamcorper tincidunt sollicitudin.</p>
+        </p>
+    </div>
+
+</body>
+</html>
