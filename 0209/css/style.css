@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Sunflower:wght@300;500;700&display=swap');
+
+body{
+    font-family: 'Sunflower', sans-serif;
+    
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.nanum_pen{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+    text-align-last: right;
+}
+.green{
+    color: green;
+}
+h1{
+    background-color: lightblue;
+    color: blueviolet;
+}
+.rtl{
+    direction: rtl;
+    unicode-bidi: bidi-override; /*글씨 반전*/
+}
+.vertical{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+    text-align: center;
+   
+}
+.txt{
+    vertical-align: center;    /*인라인과 인라인 사이에서만 적용*/
+    /*baseline(default)*/
+}
+.vertical div{
+    margin-top: 50px;
+}
+a{ 
+    text-decoration: none;
+}
+.deco1{
+    text-decoration-line: overline;
+    text-decoration-style: dashed;
+}
+.deco2{
+    text-decoration-color: aquamarine;
+    text-decoration: dotted line-through;
+
+}
+.deco3{
+    text-decoration: underline wavy red;
+}
+
+/*index2*/
+ol{
+    width: 300px;
+    margin: auto;
+}
+li{
+    height: 40px;
+    border-bottom: 1px dashed #333;
+    /*padding-top: 10px;
+    box-sizing: border-box; 복잡하니까 line-height으로 대체함!*/
+    line-height: 40px;
+}
