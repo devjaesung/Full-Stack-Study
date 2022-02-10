@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movcontainer{
+            width: 800px;
+            height: 600px;
+            margin: 30px auto;
+        }
+        object{
+            display: none;
+        }
+    </style>
+  
+</head>
+<body>
+
+    <object data="data/01-inbrief_1_gb.pdf" type="application/pdf" width="600" height="400">
+     
+    </object> <!--외부파일 보여줌-->
+    <object data="data/Seoul - 21985.mp4" type="video/mp4" width="600" height="400">
+        <param name="src" value="data/"01-inbrief_1_gb.pdf>
+        <param name="autoplay" value="true">
+    </object>
+    <!--<embed src="data/Seoul - 21985.mp4" autostart="true"> -->
+
+        <object data="index2.html"type="text/html" width="600" height="400"></object>
+
+        <iframe src="index2.html" width="600" height="400"></iframe>
+
+        <video width="600" height="400" controls autoplay muted> <!--자동재생은 소리를 꺼야함-->
+            <source src="data/Seoul - 21985.mp4" type="video/mp4">
+            <source src="data/Seoul - 21985.ogg" type="video/ogg">
+            브라우저가 video를 지원하지 않습니다.
+        </video>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hnanNlDbsE4?autoplay=1&muted=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+
+        <div class="movcontainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B6_iQvaIjXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        </div>
+
+
+</body>
+</html>
