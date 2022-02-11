@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해운대빛축제</title>
+    <link rel="stylesheet" href="css/teacher.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#">
+            <img src="images/Logo.png" alt="해운대빛축제로고">
+        </a>
+        <ul class="navigation">
+            <li><a href="#">이용안내</a>
+                <ul class="subnav">
+                    <li><a href="#">이용방법</a></li>
+                    <li><a href="#">이용시간</a></li>
+                    <li><a href="#">이용요금</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이벤트정보</a>
+                <ul class="subnav">
+                    <li><a href="#">현장이벤트</a></li>
+                    <li><a href="#">온라인이벤트</a></li>
+                    <li><a href="#">이벤트예약</a></li>
+                </ul>
+            </li>
+            <li><a href="#">프로그램</a>
+                <ul class="subnav">
+                    <li><a href="#">프로그램안내</a></li>
+                    <li><a href="#">온라인예약</a></li>
+                    <li><a href="#">단체예약</a></li>
+                </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+                <ul class="subnav">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="#">자료실</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <!-- 방법1) <img src="images/banner01.jpg" alt="배너1"> -->
+            <h1>제7회 해운대 빛축제</h1>
+        </div>
+<h1 class="text-center">회원가입</h1>
+<form name="joinform" action="https://www.haeundae.go.kr/" target="_blank" method="post">
+        <ul class="join-form">
+            <li>
+                <label for="username">이름</label>
+                <input type="text" name="username" id="username" placeholder="이름" class="input">
+            </li>
+            <li>
+                <label for="pw">비밀번호</label>
+                <input type="password" name="pw" id="pw" placeholder="비밀번호" class="input">
+            </li>
+            <li>
+                <label for="rpw">비밀번호확인</label>
+                <input type="password" name="rpw" id="rpw" placeholder="비밀번호확인" class="input">
+            </li>
+            <li>
+                <label for="email">이메일</label>
+                <input type="email" name="email" id="email" placeholder="이메일" class="input">
+            </li>
+            <li>
+                <label for="tel1">전화번호</label>
+                <input type="number" name="tel1" id="tel1" class="input-tel"> -
+                <input type="number" name="tel2"  class="input-tel"> -
+                <input type="number" name="tel3"  class="input-tel">
+            </li>
+            <li>
+                <label for="image">사진</label>
+                <input type="file" name="image" id="image">
+            </li>
+            <li>
+                <label>성별</label>
+                <label class="check"><input type="radio" name="gender" value="female" checked>여자</label>
+                <label class="check"><input type="radio" name="gender" value="male">남자</label>
+            </li>
+            <li>
+                <label>취미</label>
+                <label class="check">
+                    <input type="checkbox" name="study" value="공부" checked>공부
+                </label>
+                <label class="check">
+                    <input type="checkbox" name="walk" value="산책">산책
+                </label>
+                <label class="check">
+                    <input type="checkbox" name="read" value="독서" checked>독서
+                </label>
+                <label class="check">
+                    <input type="checkbox" name="sports" value="스포츠">스포츠
+                </label>
+            </li>
+            <li>
+                <label>사는지역</label>
+                <select name="area">
+                    <option value="">지역을 선택하세요.</option>
+                    <option value="서울">서울</option>
+                    <option value="김포">김포</option>
+                    <option value="일산">일산</option>
+                    <option value="파주">파주</option>
+                </select>
+            </li>
+            <li>
+                <label>하고싶은말</label>
+                <textarea name="comment" class="comment"></textarea>
+            </li>
+            <li class="text-center">
+                <button type="reset" class="reset">취소</button>
+                <button type="submit" class="submit">전송</button>
+            </li>
+        </ul>
+     </form>
+     <div class="footer">
+         <img src="images/Logo-gray.png" alt="흑백로고">
+         <span>copyright &copy; jaesung. 2022.</span>
+     </div>
+
+    </div>
+</body>
+</html>

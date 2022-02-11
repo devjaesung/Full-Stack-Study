@@ -1,0 +1,285 @@
+*{box-sizing: border-box;} /*모든 파일에 적용, 대부분 웹사이트는 적용시킴..!*/
+body{
+    margin: 20px 0;
+    color: #222328;
+    
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+a:hover{
+    color: #222328;
+}
+
+/* header */
+.header{
+    width: 220px;
+    padding-left: 20px;
+    position: fixed; /*왼쪽 헤더바는 스크롤할때 없어지지 않음.*/
+}
+ul.navigation{
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #666;
+    
+}
+ul.navigation>li{
+    border-bottom: 1px dashed #666;
+    text-align: center;
+}
+ul.navigation>li a{
+    line-height: 40px; /*글자를 중앙높이에 위치시키기 위함*/
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ul.navigation>li:hover{
+    
+    background-color: #00025f;
+}   
+ul.navigation>li:hover a{
+    color: white;
+}
+/*서브메뉴 마우스 올리면 보이게 함*/
+.subnav{
+    display: none;
+}
+ul.navigation>li:hover ul.subnav{
+    display:block;
+    background-color: #0006ff;
+}
+/*//////////////////////////////////////////////////////*/
+ul.subnav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #666;
+}
+ul.subnav>li:hover{
+    background-color: white;
+}
+ul.subnav>li:hover a{
+    color: #222328;
+}
+
+.container{
+    width: 780px;
+    position: absolute; 
+    top: 20px;
+    left: 220px;
+    padding-left: 20px;
+    /*포지션 잡아주기 위해 위치값을 넣어줬음*/
+    
+   
+}
+
+/*방법1*/
+/* .banner{
+    width: 760px;
+    height: 350px;
+    position: relative; 
+}
+.banner h1{
+    position: absolute; 
+    color: #fff;
+    z-index: 2;
+    top: 50px;
+    right: 50px;
+    padding: 30px;
+    background-color: rgba(255,255,255,.3);
+} */
+
+/*방법2*/
+.banner{
+    background-image: url(../images/banner01.jpg);
+    width: 760px;
+    height: 350px;
+    position: relative;
+}
+.banner h1{
+    color: #fff;
+    top: 50px;
+    right: 50px;
+    padding: 30px;
+    background-color: rgba(255,255,255,.3);
+    position: absolute; 
+}
+ /* .signup{
+    
+    position: absolute;
+    top: 370px;
+    left: 220px;
+    padding-left: 20px;
+
+ }
+ .signup div{
+     margin: 10px;
+ }
+ .signup legend{
+     text-align: center;
+ }
+
+ .title{
+     
+}
+
+ input[type=text] {
+    border: 2px solid #999;
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  input[type=button]{
+    background-color: #999;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=submit]{
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+  input[type=reset]{
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+  textarea{
+    resize: none;
+  } */
+
+  /*///////////////////////////////////////////////////////////////////////*/
+
+  .text-center{
+      text-align: center;
+  }
+  .join-form li{
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  .join-form{
+      list-style-type: none;
+      padding: 0;
+  }
+  label{
+      width: 120px;
+      line-height: 40px;
+      text-align: right;
+      padding-right: 20px;
+      display: inline-block;
+      /*Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.*/
+      font-weight: 700;
+  }
+  .input{       /*input 모양 바꿔주기*/
+      width: 50%;
+      height: 35px;
+      border: 1px solid #666;
+      border-radius: 18px;
+      padding-left: 30;
+  }
+  .input-tel{
+    width: 15%;
+    height: 35px;
+    border: 1px solid #666;
+    border-radius: 18px;
+    padding-left: 30;
+  }
+  label.check{   /*체크박스의 위치를 맞춰주기 위함*/
+      display: inline;
+      padding: 0;
+      margin-right: 30px;
+      font-weight: normal;
+  }
+  select{
+      padding: 7px;
+      border-radius: 15px;
+  }
+  textarea{
+      width: 50%; /*cols row도 가능..!*/
+      height: 150px;
+      border: 1px solid #666;
+      vertical-align: top;  /*'하고싶은말'을 위쪽으로 보내줌*/
+  }
+
+
+  /*버튼디자인*/
+  .submit {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 60px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.submit:hover {
+	background-color:#5cbf2a;
+}
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+.reset {
+	background-color:#e2412c;
+	border-radius:28px;
+	border:1px solid #ff1515;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 60px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ff4617;
+}
+.reset:hover {
+	background-color:#eb675e;
+}
+.reset:active {
+	position:relative;
+	top:1px;
+}
+.footer{
+    background-color: #666;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer span{
+    margin-left: 100px;
+    vertical-align: top;
+}
+
+        
+
+
+                
