@@ -1,0 +1,51 @@
+.nav a{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    line-height: 35px;
+    border-bottom: 2px dashed red;
+    position: relative;
+}
+.nav a:hover{
+    border-bottom: 2px solid blue;
+}
+a:hover::before{
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.container{
+    margin-top: 50px;
+    width: 300px;
+    background-color: yellowgreen;
+    padding: 5px;
+}
+.box{
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    float: left;
+}
+/*float값을 주면 부모 박스가 자식 박스의 높이를 알지 못해서 clear값을 줘야함*/
+/*
+.clear{
+    clear: both;
+}
+after를 이용하면 굳이 div:clear를 만들지 않아도 됨*/
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,44 @@
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    float: left;
+    overflow: hidden;
+}
+img{
+    height: 100%;
+}
+div.box:nth-child(1){
+    opacity: 0.2;
+}
+div.box:nth-child(2){
+    opacity: 0.4;
+}
+div.box:nth-child(3){
+    opacity: 0.6;
+}
+div.box:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.box2{
+    background: url(../images/health.jpg) no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: 400px;
+    
+}   
+.health{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    box-sizing: inherit;
+}
