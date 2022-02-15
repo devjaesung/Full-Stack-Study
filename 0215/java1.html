@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+        /*  1. 문자열을  따옴표로 싸서 변수에 대입한다.
+            2. 숫자열은 그대로 변수에 대입
+            3. 변수 : 숫자열처럼 그대로 변수에 대입 */
+
+
+       //증감연산자 : 값을 1만큼 증감 시킨다.
+       /*1++ ++1  1-- --1*/
+
+       
+
+       var A,B;
+       B=5;
+       A= ++B;//1을 미리 증가시킴
+       document.write(A);
+       document.write(B+"<br>");
+
+       B=5;
+       A= B++;
+       document.write(A+"<br>");
+       document.write(B+"<br>");
+        
+        var x=5;
+        var result=x**2   //**은 제곱근
+        document.write(result+"<br>");
+
+        var a=100;
+        var b=20;
+        var c=30;
+        var result= (a+b)*c;
+        document.write(result,"<br>");
+
+        var n=10;
+        document.write(n==10,"<br>"); //true
+        var m="10"; 
+        document.write(m==10,"<br>"); //ture
+
+
+        //and 연산 && /or연산 ||/ not 연산 !
+        var k,l;
+        k=true;
+        l=true;
+        document.write(k&&l,"<br>");   
+
+        /*
+            우선순위
+            1.()
+            2.단항 연산(--,++,!)
+            3.산술 연산(+,-,*,/)
+            4.비교 연산(>,>=,<,<=,==,===,!==)
+            5.논리 연산(&&,||)
+            6.대입 연산(=,+=,-=,/=,%=,**=)
+        */
+
+        //3항연산
+        //조건식?실행문1:실행문2;
+
+        var q=10,w=3;
+
+        var result = (q>w)?"성공":"실패";
+        document.write(result,"<br>");
+
+        //예제) 평균체중 구하는 공식  (키-100)*0.9
+        //alert(),confirm(),prompt()
+
+        var userHeight=prompt("당신의 키는?");
+        var userWeight=prompt("당신의 몸무게는?");
+        var avg =(userHeight-100)*0.9;
+        var result = (userWeight>avg)?"비만":"정상";
+        document.write(result,"<br>");
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/*여기까지가 기본적인 웹사이트 설정*/
+
+
+.container{
+    width: 1365px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/****************header**************/
+header{
+    height: 120px;
+    width: 100%;
+}
+.logo{
+    width: 270px;
+    height: 120px;
+    background-color: #e23e3e;
+    padding-top: 16px; /*가운데 높이 정렬*/
+    text-align: center;
+    float: left; /*부모가 자식의 높이를 알고 있을경우 클리어할 필요 없음*/
+}
+/*nav를 오른쪽으로 위치시키기 위해 width값 (1365-270)와 float를 적용*/
+nav{
+    width: 1095px;
+    float: left;
+    
+}
+
+
+.top-nav{
+    height: 30px;
+    background-color: #000;
+    padding-left: 16px;
+    padding-right: 35px;
+}
+.top-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px; /*가운데 높이 정렬*/
+}
+.top-nav i.fa-phone{
+    margin-right: 10px; /*전화기 아이콘과 문자열 떨어지게해줌*/
+    font-size: 20px;
+}
+a.sns{
+    display: inline-block;
+    /*15 15짜리 박스 만들어서 sns 하나씩 보이게 함*/
+    width: 15px;
+    height: 15px;
+    float: right;
+    background-image: url(../images/sns.png);
+    background-repeat: no-repeat;
+    margin-top: 7px;
+    margin-left: 30px;
+}
+ /*이미지 하나를 백그라운드로 사용해서 위치값만 조정하여 다른 이미지 3개를 얻어낸다!*/
+.insta{
+    background-position: -84px 0; 
+}
+.kakao{
+    background-position: -41px 0;
+}
+ul.gnb{
+    list-style-type: none;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.gnb li{
+    float: right; /*가로로 정렬*/
+}/*메뉴의 순서가 바뀌므로 주의!*/
+
+/**/
+ul.gnb li>a.active,ul.gnb li>a:hover{
+    color: #e23e3e;
+}
+
+ul.gnb li>a{
+    display: block;
+    height: 90px;
+    line-height: 90px;
+    padding-left: 45px;
+    padding-right: 45px;
+    text-decoration: none;
+    text-transform: uppercase; /*대문자로 바꿔줌*/
+    color: #000;
+}
+
+
+
+/*tri-bar 설정*/
+ul.gnb li:first-child>a{
+    padding: 0;
+    text-align: center;
+    width: 90px;
+    background-color: #e23e3e;
+    color: #fff;
+    font-size: 30px;
+}
+
+.banner{
+    background: url(../images/banner.jpg) no-repeat;
+    background-position: 0 -150px;
+    background-size: cover;
+    width: 1365px;
+    height: 350px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    
+}
+.banner>.slogan{
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 270px;
+    font-size: 50px;
+}
