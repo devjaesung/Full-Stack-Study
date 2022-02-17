@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반복문</title>
+<style>
+    body{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .red{
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
+    .green{
+        color: green;
+    }
+</style>
+</head>
+
+<body>
+<script>
+    // var num=1;
+    // while(num<11){
+    //     document.write(num,"<br>");
+    //     num++;
+    // }
+
+    //ex1 0~10에서 짝수만 넣으시오
+    // var i=1;
+    
+    // while(i<11){
+    //     if(i%2 == 0){
+        
+    //     document.write(i,"<br>");
+    //     }
+    //     num++;
+    // }
+
+    //ex2 1~30중에 2와 6의 공약수
+    // var n=1;
+    // while(n<=30){
+    //     if(n%2==0 && n%6==0){
+    //         document.write(n,"<br>");
+    //     }
+    //     n++;
+    // }
+
+    //20부터 10까지 숫자중 짝수일 경우 빨간색, 홀수일 경우 파란색으로 출력
+    // var n=20;
+    // while(n>=10){
+    //     if(n % 2 == 0){
+    //         document.write("<p class='red'>"+i+"</p>");
+    //     }else{
+    //         document.write("<p class='blue'>"+i+"</p>");
+    //     }
+    //     n--;
+    // }
+
+    //do while
+    // var 변수 = 초기값;
+    // do{
+    //     자바스크립트코드;
+    //     증감식;
+    // }while(조건식)
+
+    // var num=10;
+    // do{
+    //     document.write("안녕?"+ num,"<br>");
+    //     num--;
+    // }while(num<3){
+
+    // }
+    //for문
+    // for(초기값;조건식;증감식){
+    //     출력코드;
+    // }
+
+    // for(var i=1;i<=10;i++){
+    //     document.write("반복"+i+"<br>");
+    // }
+
+    //ex3) 1~500 정수 중에서 5의 배수일 경우 빨간색 글자 출력, 7의 배수일 경우 파란색 글자 출력, 5의배수이면서 7의 배수일 경우 핑크색 글자로 출력
+    // for(var i=1;i<=500;i++){
+    //     if(i%5 == 0 && i%7 != 0){
+    //         document.write("<p class='red'>"+i+"</p>");
+    //     }else if(i%7 == 0 &&i%5 !=0){
+    //         document.write("<p class='blue'>"+i+"</p>");
+               
+    //     }else if(i%5 == 0 && i%7 ==0){
+    //         document.write("<p class='green'>"+i+"</p>");
+    //     }
+    // }
+
+
+    //ex4) while문 또는 for문을 이용하여 1~100까지의 합을 구하시오
+    var sum=0;
+    var i;
+    for(i=0;i<=100;i++){
+        
+        sum+=i; //sum=sum+1;
+    }
+    document.write(sum,"<br>");
+
+
+
+
+</script>
+</body>
+</html>

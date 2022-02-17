@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        var now = new Date();
+        document.write(now, "<br>");
+        var year = now.getFullYear(); //getMonth()+1, getDate(), getDay()
+        console.log(year);
+
+        //getDay를 이용해서 요일 출력하기
+        var day = now.getDay();
+        var nday;
+        document.write(day, "<br>");
+        //switch문으로 만들기
+        // switch (day) {
+        //     case 0:
+        //         nday = "일요일";
+        //         break;
+
+        //     case 1:
+        //         nday = "월요일";
+        //         break;
+
+        //     case 2:
+        //         nday = "화요일";
+        //         break;
+
+        //     case 3:
+        //         nday = "수요일";
+        //         break;
+
+        //     case 4:
+        //         nday = "목요일";
+        //         break;
+
+        //     case 5:
+        //         nday = "금요일";
+        //         break;
+
+        //     case 6:
+        //         nday = "토요일";
+        //         break;
+        // }
+        //if문으로 만들기
+        if (day == 0) {
+            nday = "일요일";
+        } else if (day == 1) {
+            nday = "월요일"
+        } else if (day == 2) {
+            nday = "화요일"
+        } else if (day == 3) {
+            nday = "수요일"
+        } else if (day == 4) {
+            nday = "목요일"
+        } else if (day == 5) {
+            nday = "금요일"
+        }else{
+            nday = "토요일"
+        }
+
+
+        document.write(nday);
+    </script>
+</body>
+
+</html>
