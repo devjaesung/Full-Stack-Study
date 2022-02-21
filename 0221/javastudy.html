@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java exercise</title>
+    <style>
+        table{
+            width: 400px;
+        }
+        table, tr, td{
+            border-collapse: collapse;
+            border: 1px solid #333;
+        }
+        td{
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+    
+    <script>
+        // var i=0;
+        // while(i < 20){
+        //     if(i==10){break;} //loop를 강제로 중지시킴
+        //     document.write("카운트"+ i + "<br>");
+        //     i++;
+        // }
+        // document.write("<hr>")
+        // for(var i=0;i<20;i++){
+        //     if(i % 2 ==0) continue; // loop를 스킵함.
+        //     document.write("카운트"+ i + "<br>");
+        // }
+    
+        //ex1) while 을 이용하여 구구단 5단을 출력하시오.(5 x 1 = 5...)
+        var i=1;
+        while(i<=9){
+            
+            document.write("5 x "+ i + " = " + i*5, "<br>");
+            i++;
+            
+        }
+        document.write("<hr>")
+    
+        //ex2) for문을 이용하여 구구단 9단을 출력하시오.
+        for(var n=1;n<=9;n++){
+    
+            document.write("9 x "+ n + " = " + n*9, "<br>");
+        
+        }
+        document.write("<hr>")
+    
+        //ex3)  for문을 이용하여 5행 5열의 표를 만들고 안에 숫자를 출력하시오.
+        var num=1;
+        document.write("<table>");
+            for(var tr=1;tr<=5;tr++){
+                document.write("<tr>");
+                    for(var td=1;td<=5;td++){
+                        document.write("<td>" + num +"</td>");
+                        num++;
+                    }
+                document.write("</tr>");
+            }
+        document.write("</table>");
+    
+        document.write("<hr>")
+        //다른방법
+        var num=1;
+        var tbl = "<table>";
+      
+            for(var tr=1;tr<=5;tr++){
+                tbl += "<tr>";
+                    for(var td=1;td<=5;td++){
+                        tbl += "<td>" + num + "</td>";
+                        num++;
+                    }
+                tbl += "</tr>";
+            }
+        tbl += "</table>";
+    
+        document.write(tbl);
+       
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

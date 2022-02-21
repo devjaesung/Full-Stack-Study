@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity & !important</title>
+    <style>
+        #demo {color: blue;}
+        .test {color: green;} 
+        p {color: red;}
+        .imp{color: yellow !important;}
+        </style>
+</head>
+<body>
+           
+        <p id="demo" class="test">Hello World!</p>
+        <p id="demo" class="test" style="color: pink;">Hello World!</p>
+        <p id="demo" class="test imp" style="color: pink;">Hello World!</p>
+</body>
+</html>

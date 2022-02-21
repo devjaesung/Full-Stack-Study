@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study about relative length Units</title>
+    <style>
+         html { font-size: 16px; }
+      body { font-size: 1.5em; }
+      .em { font-size: 2.0em; }
+      .rem{ font-size: 2.0rem;}
+      .vw { font-size: 1.0vw; }
+      .vh { font-size: 1.0vh; }
+      .vmin { font-size: 1.0vmin; }
+      .vmax { font-size: 1.0vmax; }
+    </style>
+</head>
+
+<body>
+    <p class="em">
+        The font-size of the class "em" is set to 48px(16*1.5*2.0).
+    </p>
+    <p class="rem">
+        The font-size of the class "rem" is set to 32px(16**2.0).
+    </p>
+    <p class="vw">
+        The font-size relative to 1% of the width of the viewport.
+    </p>
+    <p class="vh">
+        The font-size relative to 1% of the height of the viewport.
+    </p>
+    <p class="vmin">
+        The font-size relative to 1% of viewport's smaller dimension.
+    </p>
+    <p class="vmax">
+        The font-size relative to 1% of viewport's larger dimension.
+    </p>
+
+
+</body>
+
+</html>
