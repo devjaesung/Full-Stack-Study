@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaStudy1(객체모델)</title>
+</head>
+<body>
+    <script>
+        // var tv = new Object();
+        // tv.color = "흰색";
+        // tv.price = "1500000";
+        // tv.info =  function(){
+        //     document.write("tv색상" + this.color);
+        //     document.write("<br>");
+        //     document.write("tv가격" + this.price);
+        // }
+        // document.wrte("tv정보");
+        // tv.info();
+
+
+        var toDay = new Date();
+        document.write("오늘은");
+        document.write(toDay.getFullYear()+"년");
+        document.write(toDay.getMonth()+1+"월");
+        document.write(toDay.getDate()+"일 입니다");
+
+        var birthday = new Date(1998,6,21);
+        var birthweek = birthday.getDay();
+
+        console.log(birthweek);
+
+    </script>   
+</body>
+</html>
