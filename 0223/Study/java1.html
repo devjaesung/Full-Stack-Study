@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex1) 오늘(2.23)부터 7월 27일까지 며칠 남았는지 계산하시오.
+        var toDay = new Date();
+        var nowYear = toDay.getFullYear();
+        // console.log(nowYear);
+
+        var lastDay = new Date(nowYear,8,27);
+        // console.log(last.getTime());
+        // console.log(toDay.getTime());
+
+        var diffDate = lastDay.getTime() - toDay.getTime();
+        console.log(diffDate / (60 * 1000 * 60 * 24));
+        
+
+        var num=1.521435;
+        //ex2) 숫자 10, 5, 8, 30중 최대값을 구하시오.
+        var maxNum = Math.max(10, 5, 8, 30);
+
+        //ex3) 10,5, 8,30 중 최소값을 구하시오.
+        var minNum = Math.min(10, 5, 8, 30);
+
+        //ex4) 변수 num의 소수점 첫째 자리를 반올림 하라.
+        var rNum = Math.round(num);
+
+       //ex5) 변수 num의 소수점 첫째 자리를 내림하라
+       var fNum = Math.floor(num);
+
+       //ex6) 변수 num의 소수점 첫째 자리를 올림하라.
+       var cNum = Math.ceil(num);
+
+       //ex7) 0과 1사이의 난수를 발생시키시오.
+       var ranNum = Math.random();
+
+       //ex8) 반지름이 8인 원의 넓이를 구하시오.
+       var pNum = Math.PI;
+
+       document.write(maxNum,"<br>");
+       document.write(minNum,"<br>");
+       document.write(rNum,"<br>");
+       document.write(fNum,"<br>");
+       document.write(cNum,"<br>");
+       document.write(ranNum,"<br>");
+       document.write(pNum,"<br>");
+
+       var name =['a','b','c','d','e'];
+       var ranNum = Math.floor(Math.random()*5);
+       
+       document.write(name[ranNum],"<br>");
+
+    </script>
+</body>
+</html>

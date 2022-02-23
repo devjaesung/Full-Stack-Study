@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0223CSS advanced</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            float: left;
+        }
+
+        .box1{
+            background-image: linear-gradient(to left,yellow,red); /*(방향,컬러1,컬러2,컬러345...)*/
+        }
+        .box2{
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        }
+        .box3{
+             background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
+        }
+        .box4{
+            background-image: repeating-linear-gradient(to right, blue 10%, yellow 20%);
+        }
+        .box5{
+            background-image: radial-gradient(red 20%,yellow 30%,green 10%);
+            /* background-image: -webkit-radial-gradient();
+            background-image: -moz-radial-gradient();
+            background-image: -o-radial-gradient();
+            background-image: -ms-radial-gradient(); */
+        }
+        h1{
+            color: #999;
+            text-shadow: 2px 2px 10px rgba(0,0,0,.3);/* x축두께, y축두께, blur값, 색상*/
+        }
+        .box6{
+            box-shadow: 10px 10px 5px 12px rgba(0,0,0,.7) inset; /*x축 두께, y축두께, blur값, 뿌려지는정도, 색상 inset : 박스 안쪽으로 그림자 넣음*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Text Shadow Effect</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    
+</body>
+</html>

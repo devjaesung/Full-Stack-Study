@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+         h1,p{
+            text-align: center;
+        }
+        div.card{
+            width: 250px;
+            margin: 10px auto;
+            text-align: center;
+            box-shadow: 0 2px 4px 0 rgba(76,175,80,0.30),0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        }
+        div.card:hover{
+            box-shadow: 0 4px 6px 0 rgba(76,175,80,0.30),0 6px 10px 0 rgba(0,0,0,0.2), 0 8px 22px 0 rgba(0,0,0,.19);
+        }
+        div.header{
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        div.container{
+            padding: 10px;
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Card</h1>
+    <p>boc-shadow 기능 연습</p>
+    <div class="card">
+        <div class="header">
+            <h1>23</h1>
+        </div>
+        <div class="container">
+            <p>2022,2(February)</p>
+        </div>
+    </div>
+    
+</body>
+</html>
