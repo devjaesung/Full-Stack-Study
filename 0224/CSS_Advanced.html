@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transform&Transitions</title>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        background: red;
+        border-radius: 8px;
+        /* transition-property: width,height,transform;
+        transition-property: 2s,3s,4s;
+        transition-delay: 1s,1s,1s; --->요런식으로 사용함*/
+    }
+    .box1:hover{
+        transform: translate(-4px, 4px); /*(x축,y축) 이동*/
+        box-shadow: 2px 2px 10px 0 rgba(0,0,0,.3); /*이런식으로 응용하기!*/
+        transition-duration: 800ms;
+        transition-delay: 1s;
+    }
+    .box2:hover{
+        transform: rotateY(50deg);
+        width: 200px;
+        height: 200px;
+    }
+    .box3:hover{
+        transform: scale(2,0.8);
+        transition-duration: 2s;
+        transition-timing-function: ease-out;
+    }
+    .box4:hover{
+        transform: skew(20deg);
+    }
+
+</style>
+</head>
+<body>
+    <h1>transform</h1>
+    <ol>
+        <li>
+            이동 옵션 - translate(x축,y축); translateX(단위); translateY(단위);
+            <div class="box1"></div>
+        </li>
+        <li>
+            회전 옵션 - rotate(deg); rotateX(deg); rotateY(deg); rotateZ(deg);
+            <div class="box2"></div>
+        </li>
+        <li>
+            크기 옵션 - scale(x,y); scaleX(); scaleY(); //단위 배수
+            <div class="box3"></div>
+        </li>
+
+        <li>
+            모서리 각도 조정 옵션 - skew(Xdeg,Ydeg); skewX(deg); skewY(deg);
+            <div class="box4"></div>
+        </li>
+        <li>
+            행렬 - matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+        </li>
+    </ol>
+    
+    <h1>transition</h1>
+    <ul>
+        <li>transition-duration : 변환되는 속도를 지정</li>  
+        <li>transition-delay : 변환대기 시간
+            <div class="box1"></div>
+        </li>
+        <li>transition-property : width height
+            <div class="box2"></div>
+        </li>
+        <li>transition-timing-function : 
+            <ul>
+                <li>linear - 처음부터 끝까지 같은 속도 = (0,0,1,1)</li>
+                <li>ease - 처음,끝을 부드럽게 (기본값) = (0.25,0.1,0.25,1)</li>
+                <li>ease-in - 처음을 느리게</li>
+                <li>ease-out - 마지막을 느리게</li>
+                <li>ease-in-out - 처음,마지막을 느리게</li>
+                <li>cubic-bezier(n,n,n,n) - 속도를 직접 설정</li>
+            </ul>
+            <div class="box3"></div>
+        </li>
+        <li>transition: property duration timing-function delay // 축약버전</li>
+    </ul>
+    
+    
+</body>
+</html>
