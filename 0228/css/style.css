@@ -1,0 +1,76 @@
+@import url(animate.css);
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+a.brand{
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+ul.nav{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 750px;
+    overflow: auto;
+}
+li{
+    float: left;
+    margin-bottom: 10px;
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+}
+li>a{
+    display: block; /*마우스 hover되는 공간 늘리기 위함*/
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+li>a::after{
+    content: "";
+    display: block; 
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.5s;
+}/*transition 활용하기 위해 가상요소(밑줄 처럼 보이는 박스)를 만들어준다.*/
+li>a:hover::after{
+    width: 100%;
+}
+
+.wrapper{
+    width: 800px;
+    padding: 40px;
+    margin: 30px auto;
+    border: 1px solid #333;
+    position: relative;
+}
+.box1{
+    height: 50px;
+    background-color: green;
+    margin-top: 5px;
+}
+.box2{
+    height: 50px;
+    background-color: red;
+    margin-top: 5px;
+}
+.box3{
+    height: 50px;
+    background-color: blue;
+    margin-top: 5px;
+}
