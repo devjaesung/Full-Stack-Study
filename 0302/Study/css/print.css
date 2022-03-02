@@ -1,0 +1,10 @@
+  /*웹사이트에서는 적용되지 않지만 인쇄할 경우 적용됨.*/
+    h1{
+        color: blue;
+    }
+    div{
+      display: none;
+    }
+    div.box2{
+        display: block;
+    }

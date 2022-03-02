@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String Methods</title>
+<style>
+    body{
+        margin: 100px;
+    }
+</style>
+</head>
+<body>
+
+    <input type="text" name="box" id="box" onkeypress="curse()" >
+    <br>
+
+    <script>
+        function curse(){
+           var str = document.getElementById("box").value;
+           if(str.indexOf("shit")>-1){
+           alert("Don't use that word");
+           }
+        }
+
+        var str = "Hello, you look great. Good luck to you."
+        document.write(str.charAt(0),"<br>"); // charAt을 사용하여 문자열의 인덱스 출력
+        document.write(str.indexOf("you"),"<br>");
+        document.write(str.indexOf("you", 15),"<br>"); //문자열 왼쪽부터 가장 먼저 발견된 ""의 인덱스 값을 반환, 값이 없으면 -1을 출력 /두번째 인자를 이용하여 인덱스 시작 위치를 지정할 수 있음
+        document.write(str.lastIndexOf("you"),"<br>"); //검색을 오른쪽 부터 함
+
+        document.write(str.match("luck"),"<br>"); //같은 단어를 반환함. 없으면 null 반환    
+        document.write(str.search("you"),"<br>"); //indexOf 와 동일한 기능 위치지정은 불가
+
+        //문자열 자르기
+        document.write("문자열 자르기 :" + str.substr(23,4), "<br>" ); //문자열 인덱스번호 23부터 4글자를 가져옴
+        document.write("문자열 자르기2 :" + str.substring(6,10), "<br>" ); //인덱스번호 6부터 10이전(9)까지 가져옴
+
+        var t = "musecom.net";
+        console.log(t.substr(3,5)); //ecom.
+        console.log(t.substr(-2)); //역순으로 et
+        console.log(t.substr(-2,2));
+
+        console.log(t.length);
+        console.log(t.substr(1, t.length)); //첫번째 문자 잘라냄.
+        console.log(t.substr(-0, t.length-1)); //마지막 문자 잘라냄.
+
+        /*
+            substr(start, length)
+                - 문자열 중 첫번째 인자(start)에서 두번째 인자(length까지의 구간에 해당하는 문자열을 반환한다.)
+                - length를 지정하지 않으면 start 이후부터 문자열 끝까지를 처리구간으로 간주한다.
+                - start가 음수일 경우, start의 index는 문자열의 뒤에서 부터 시작된다.
+                - 두번째인자(length)가 음수일 경우 빈 값을 반환함.
+        */
+
+        //google.com
+        //예제1) google만 출력
+        //예제2) com만 출력
+        //예제3) oogle.com 출력
+        //예제4) google.co를 출력
+
+        document.write("<hr>")
+        var go = "google.com";
+        document.write(go.substr(0,6),"<br>");
+        document.write(go.substr(-3),"<br>");
+        document.write(go.substr(1),"<br>"); //0번째 제외되고 끝까지 출력
+        document.write(go.substr(0, go.length-1),"<br>");
+
+        /*
+            substring(start,end)
+                - return값은 시작 인덱스부터 end 바로 이전까지 반환
+                - end는 생략 가능(시작부터 끝까지)
+                - start값을 end값보다 크게하면 작은 숫자가 시작, 큰 숫자가 종료로 세팅.
+                - 매개변수 둘 중에 한 개값이 음수값이면 시작위치가 0을 설정됨.
+                - 매개변수가 둘 다 음수면 반환값은 없다.
+        */
+
+
+        document.write("<hr>")
+        //문자열 치환   홍길동 -->홍*동
+        //replace(원래문자,치환문자);
+        
+       document.write(str.replace("Hello","Bye"),"<br>"); //가장 앞에 있는 값만 바꿈'
+       
+
+       //toLowerCase(),toUpperCase() : 대소문자 변환
+        document.write(str.toUpperCase(),"<br>");
+
+        //length : 문자열 길이
+        document.write(str.length,"<br>");
+
+        //split(매개변수) : 문자열 분할, 매개변수를 기준으로 문자열 분리
+        var s = str.split(" ");
+        document.write(s.length,"<br>");
+        document.write(s[0],"<br>");
+        for(var i=0;i<s.length;i++){
+            document.write(s[i]);
+            document.write("-");
+        }
+
+        document.write("<hr>")
+        //예제
+        /*
+            var a='abc,bcd,def,fge';
+            쉼표를 기준으로 문자열을 자른 후 각각의 문자를 줄바꿈하여 출력
+        */
+        var a='abc,bcd,def,fge';
+        var ss= a.split(",");
+        for(var n=0;n<ss.length;n++){
+            document.write(ss[n],"<br>");
+        }
+                
+
+
+    </script>
+</body>
+</html>
