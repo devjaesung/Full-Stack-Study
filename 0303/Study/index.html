@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS_flex</title>
+<style>
+    .container{
+        width: 1200px;
+        height: 500px;
+        max-width: 100%;
+        margin: 10px auto;
+        background-color: dodgerblue;
+        padding: 10px;
+        display: flex;
+        /*flex-direction: row; column, column-reverse, row, row-reverse
+        flex-wrap: wrap-reverse; 줄바꿈 할지 안할지, default = no-wrap*/
+        flex-flow: row wrap; /*shorthands*/
+        justify-content: space-between; /**/
+        align-items: baseline;
+    }
+    .container>div{
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        background-color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>
+        <div><small>4</small></div>
+    </div>
+</body>
+</html>

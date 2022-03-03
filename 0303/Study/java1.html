@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body>
+
+    <script>
+       var name = prompt("Type your name","");
+       document.write(name.toUpperCase(),"<br>");
+       
+       var tel = window.prompt("Type your phone-number","000-0000-0000");
+    // var slicetel = tel.substring(0,tel.length-4); 시작,끝
+    // var sliceTel = tel.substr(0,tel.length-4); 시작, 잘라낼 문자갯수
+        var sliceTel = tel.slice(0,-4);
+       document.write("your tel-number is " + sliceTel + "****.");
+
+       //prompt창으로 이메일 주소를 받아 유효성 검사를 하시오.
+       //하위 도메인 co.kr com net or.kr go.kr org ac.kr
+
+        var mail = prompt("Type your e-mail","");
+        var arrUrl = ["co.kr","com","net","or.kr","go.kr","org","ac.kr"];
+        var check1 = false, check2 = false;
+
+        //indexof를 이용하여 입력받은 값에 @이가 포함되어 있으면 check1을 true로 만듬
+        //그렇지 않으면 check1은 기본값인 falserk 된다
+        if(mail.indexOf("@")>0){check1=true;}
+
+        //반복문을 이용하여 배열 arrUrl의 원소 하나하나가 mail에 포함되어 있는지 검색한다. ex) userUrl[0], userUrl[1], userUrl[2]...
+        //포함되어 있는 도메인이 하나라도 있을경우 check2는 true가 된다.
+        for(var i=0;i<arrUrl.length;i++){
+            if(mail.indexOf(arrUrl[i])>0){
+                check2=true;
+            }                                                        
+        }
+
+        //check1,check2 모두 true일 때만 mail을 출력한다.
+        if(check1 && check2){
+            document.write(mail);
+        }else{
+            alert("wrong e-mail");
+        }
+        
+        //random menu
+
+        var menu = ["짜장면","돈까스","된장국","김치찌개","회덮밥","라면","햄버거"];
+        var menuNum = Math.floor(Math.random()*menu.length);
+        document.write(menu[menuNum]);123
+
+    </script>
+</body>
+</html>
