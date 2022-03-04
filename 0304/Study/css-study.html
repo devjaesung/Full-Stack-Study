@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive</title>
+    <style>
+        .container{
+            /* width: 1000px;
+            height: 600px; */
+            margin: 30px auto;
+            background-color: dodgerblue;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .container>div{
+            background-color: #fff;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div style="order:3">list1</div>
+      <div style="order:6">list2</div>
+      <div style="order:4">list3</div>
+      <div style="order:2">list4</div>
+      <div style="order:1">list5</div>
+      <div style="order:5">list6</div>
+      <div style="flex-shrink: 1">list7</div>
+      <div style="flex-shrink: 1">list8</div>
+      <div style="flex-shrink: 1">list9</div>
+      <div style="flex-basis: 300px">list10</div>
+      <div style="flex-shrink: 1">list11</div>
+      
+        
+    </div>
+</body>
+</html>

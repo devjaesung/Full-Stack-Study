@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body >
+
+<script>
+    // myFnc(); 함수 실행 명령, 호이스팅 방식으로 함수를 나중에 선언해도 출력됨.
+
+    // function myFnc(){
+    //     document.write("함수를 실행합니다.");
+    //     document.write("javascript 함수입니다.");
+    // }
+
+//호이스팅 예시
+    var i=0;
+    myFnc(); //함수실행 -->hello1
+
+    //함수선언
+    function myFnc(){
+        i++;
+        document.write("hello" + i,"<br>");
+    }    
+    
+    myFnc(); // -->hello2
+
+    var theFnc = function(){
+        i++;
+        document.write("bye" + i,"<br>");
+    } 
+    theFnc(); // --> bye3
+
+
+    
+    </script>
+</body>
+</html>

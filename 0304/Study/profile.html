@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body>
+
+    <script>
+        //prompt. 이름을 입력하세요. 사는 곳을 입력하세요.
+        //confirm 인사말을 출력하시겠습니까?
+        /*
+        예 --> 함수에 담아
+                안녕하세요? '이름'입니다. 사는 곳은 '사는곳' 입니다.
+        아니오 --> end.
+        */
+
+    var name = prompt("이름을 입력하세요.");
+    var area = prompt("사는곳을 입력하세요.");
+    var r = confirm("인사말을 출력하시겠습니까?");
+    if(r){
+        profile(name,area);
+    }else{
+        document.write("end");
+    }
+
+    function profile(n,a){
+        document.write("안녕하세요?" + n +"입니다.","<br>");
+        document.write("사는곳은" + a + "입니다.");
+    }
+
+    </script>
+</body>
+</html>

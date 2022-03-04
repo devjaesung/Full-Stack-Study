@@ -1,0 +1,32 @@
+var
+
+    - 1개의 데이터만 저장
+    - 문자형, 숫자형, 논리형
+
+function
+    
+    - 자바스크립트 코드를 저장한다.
+    - 출력문, 제어문
+    - 호이스팅 방식(함수를 가장 먼저 읽어서 처리함.)
+
+
+[return] : 
+이전까지 실행된 결과 데이터를 반환하고 강제 종료하는 문 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-->반응형 웹 만들때 반드시 설정!(글씨 크기 자동 조절) //웹디자인 실기에 가끔 나옴..외워두기!!
+
+[부모가 갖는 flex 명령]
+- flex-direction + flex-wrap -->flex-flowd
+- justify-content
+-align-items
+-align-content
+
+[자식들이 갖는 flex 명령]
+- order
+- flex-grow
+- flex-shrink
+- flex-basis
+  '축약-->'  felx: flex-grow flex-shrink flex-basis;
+- align-self

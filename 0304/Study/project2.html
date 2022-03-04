@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+<style>
+    .container{
+        border: 1px solid #999;
+        width: 400px;
+        margin: 50px auto;
+        padding: 10px;
+    }
+   
+    img{
+        max-width: 100%;
+    }
+    .btnbox{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .btn{
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="imgbox">
+            <img src="images/t01.jpg" alt="01">
+        </div>
+            <div class="btnbox">
+                <button class="btn" onclick="gallery(0)"> 이전 </button>
+                <button class="btn" onclick="gallery(1)"> 다음 </button>
+            </div>
+        
+    </div>
+   
+    
+        <p id="num"></p>
+    
+<!------------------script-------------------------------->
+    <script>
+        var num = 1; //이미지가 t01부터 시작하므로
+
+        function gallery(n){
+            if(n){
+                if(num == 8){return;}
+                num++;
+            }else{
+                if(num==1){return;}
+                num--;
+            }
+           var imgTag = document.getElementById("imgbox");
+        imgTag.innerHTML =  '<img src="images/t0'+num+'.jpg" alt="0'+num+'">';
+        }
+
+    </script>
+</body>
+</html>

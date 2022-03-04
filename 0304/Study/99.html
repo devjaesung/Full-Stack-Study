@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>99단 8단</title>
+<style>
+    p{
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .box{
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <p id="viewi"></p>
+    <div class="box">
+    <button type="button" onclick="eightDan(1)">1</button>
+    <button type="button" onclick="eightDan(2)">2</button>
+    <button type="button" onclick="eightDan(3)">3</button>
+    <button type="button" onclick="eightDan(4)">4</button>
+    <button type="button" onclick="eightDan(5)">5</button>
+    <button type="button" onclick="eightDan(6)">6</button>
+    <button type="button" onclick="eightDan(7)">7</button>
+    <button type="button" onclick="eightDan(8)">8</button>
+    <button type="button" onclick="eightDan(9)">9</button>
+    </div>
+
+<!---------------script--------------->
+    <script>
+        
+    function eightDan(i){
+        var result = 8*i;
+        document.getElementById('viewi').innerHTML = result;
+    }
+    
+    </script>
+</body>
+</html>
