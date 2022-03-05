@@ -1,0 +1,175 @@
+*{
+    box-sizing:border-box;
+}
+.container{
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.row{
+    margin-left:-15px;
+    margin-right:-15px;
+    display:flex;
+    flex-wrap:wrap;
+    position: relative;
+}
+
+[class*="col-"]{
+    padding-left:15px;
+    padding-right:15px;
+    position: relative;
+}
+
+.col-1{
+    width:8.3333334%;
+}
+.col-2{
+    width:16.6666667%;
+}
+.col-3{
+   width:25%; 
+}
+.col-4{
+    width:33.3333334%;
+}
+.col-5{
+    width:41.6666666667%;
+}
+.col-6{
+    width:50%;
+}
+.col-7{
+    width:58.3333334%;
+}
+.col-8{
+    width: 66.66666667%;
+}
+.col-9{
+   width:75%;
+}
+.col-10{
+  width: 83.33333334%;
+}
+.col-11{
+   width:91.66666667%;
+}
+.col-12{
+    width:100%;
+}
+.order-0{
+    order:0;
+}
+.order-1{
+    order:1;
+}
+.order-2{
+    order:2;
+}
+.order-3{
+    order:3;
+}
+.order-4{
+    order:4;
+}
+.order-5{
+    order:5;
+}
+.order-6{
+    order:6;
+}
+.order-7{
+    order:7;
+}
+.order-8{
+    order:8;
+}
+.order-9{
+    order:9;
+}
+.order-10{
+    order:10;
+}
+.order-11{
+    order:11;
+}
+.order-12{
+    order:12;
+}
+
+@media screen and (max-width:768px) {
+    .col-tb-1{
+        width:8.3333334%;
+    }
+    .col-tb-2{
+        width:16.6666667%;
+    }
+    .col-tb-3{
+       width:25%; 
+    }
+    .col-tb-4{
+        width:33.3333334%;
+    }
+    .col-tb-5{
+        width:41.6666666667%;
+    }
+    .col-tb-6{
+        width:50%;
+    }
+    .col-tb-7{
+        width:58.3333334%;
+    }
+    .col-tb-8{
+        width: 66.66666667%;
+    }
+    .col-tb-9{
+       width:75%;
+    }
+    .col-tb-10{
+      width: 83.33333334%;
+    }
+    .col-tb-11{
+       width:91.66666667%;
+    }
+    .col-tb-12{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .col-mb-1{
+        width:8.3333334%;
+    }
+    .col-mb-2{
+        width:16.6666667%;
+    }
+    .col-mb-3{
+       width:25%; 
+    }
+    .col-mb-4{
+        width:33.3333334%;
+    }
+    .col-mb-5{
+        width:41.6666666667%;
+    }
+    .col-mb-6{
+        width:50%;
+    }
+    .col-mb-7{
+        width:58.3333334%;
+    }
+    .col-mb-8{
+        width: 66.66666667%;
+    }
+    .col-mb-9{
+       width:75%;
+    }
+    .col-mb-10{
+      width: 83.33333334%;
+    }
+    .col-mb-11{
+       width:91.66666667%;
+    }
+    .col-mb-12{
+        width:100%;
+    }
+}

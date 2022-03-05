@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Material Icons Outlined';
+    src: url('../webfonts/MaterialIconsOutlined-Regular.eot');
+    src: url('../webfonts/MaterialIconsOutlined-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsOutlined-Regular.woff2') format('woff2'),
+        url('../webfonts/MaterialIconsOutlined-Regular.woff') format('woff'),
+        url('../webfonts/MaterialIconsOutlined-Regular.svg#MaterialIconsOutlined-Regular') format('svg'),
+        url('../webfonts/MaterialIconsOutlined-Regular.otf') format('truetype');
+        
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('../webfonts/MaterialIcons-Regular.eot');
+    src: url('../webfonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIcons-Regular.woff2') format('woff2'),
+        url('../webfonts/MaterialIcons-Regular.woff') format('woff'),
+        url('../webfonts/MaterialIcons-Regular.svg#MaterialIcons-Regular') format('svg'),
+        url('../webfonts/MaterialIcons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Sharp';
+    src: url('../webfonts/MaterialIconsSharp-Regular.eot');
+    src: url('../webfonts/MaterialIconsSharp-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsSharp-Regular.woff2') format('woff2'),
+        url('../webfonts/MaterialIconsSharp-Regular.woff') format('woff'),
+        url('../webfonts/MaterialIconsSharp-Regular.svg#MaterialIconsSharp-Regular') format('svg'),
+        url('../webfonts/MaterialIconsSharp-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Round';
+    src: url('../webfonts/MaterialIconsRound-Regular.eot');
+    src: url('../webfonts/MaterialIconsRound-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsRound-Regular.woff2') format('woff2'),
+        url('../webfonts/MaterialIconsRound-Regular.woff') format('woff'),
+        url('../webfonts/MaterialIconsRound-Regular.svg#MaterialIconsRound-Regular') format('svg'),
+        url('../webfonts/MaterialIconsRound-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Material Icons Two Tone';
+    src: url('../webfonts/MaterialIconsTwoTone-Regular.eot');
+    src: url('../webfonts/MaterialIconsTwoTone-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.woff2') format('woff2'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.woff') format('woff'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.svg#MaterialIconsTwoTone-Regular') format('svg'),
+        url('../webfonts/MaterialIconsTwoTone-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.material-icons{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1; /*1배*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /*웹킷 사용 브라우저 용*/
+    -webkit-font-smoothing: antialiased;
+    /*사파리,크롬용*/
+    text-rendering: optimizeLegibility;
+    /*익스플로러용*/
+    font-feature-settings: 'lina';
+}
+
+.material-icons-outlined{
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1; /*1배*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /*웹킷 사용 브라우저 용*/
+    -webkit-font-smoothing: antialiased;
+    /*사파리,크롬용*/
+    text-rendering: optimizeLegibility;
+    /*익스플로러용*/
+    font-feature-settings: 'lina';
+    
+}
+.material-icons-round{
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1; /*1배*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /*웹킷 사용 브라우저 용*/
+    -webkit-font-smoothing: antialiased;
+    /*사파리,크롬용*/
+    text-rendering: optimizeLegibility;
+    /*익스플로러용*/
+    font-feature-settings: 'lina';
+}
+
+.material-icons-sharp{
+    font-family: 'Material Icons Sharp';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1; /*1배*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /*웹킷 사용 브라우저 용*/
+    -webkit-font-smoothing: antialiased;
+    /*사파리,크롬용*/
+    text-rendering: optimizeLegibility;
+    /*익스플로러용*/
+    font-feature-settings: 'lina';
+}
+
+.material-icons-twotone{
+    font-family: 'Material Icons Two Tone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1; /*1배*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /*웹킷 사용 브라우저 용*/
+    -webkit-font-smoothing: antialiased;
+    /*사파리,크롬용*/
+    text-rendering: optimizeLegibility;
+    /*익스플로러용*/
+    font-feature-settings: 'lina';
+}

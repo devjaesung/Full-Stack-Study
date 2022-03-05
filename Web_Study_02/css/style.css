@@ -1,0 +1,231 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:16px;
+    color:#000;
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration:none;
+    color:#222;
+}
+.container{
+    width:1360px;
+}
+a.brand{
+    display:block;
+    width:110px;
+    height:80px;
+    text-align:center;
+    font-size:25px;
+    font-weight:900;
+    color:#ff5555;
+    line-height:80px;
+}
+a.brand span.material-icons{
+    font-size:35px;
+    vertical-align:middle;
+}
+.weight{
+    font-weight:700;
+}
+.light{
+    font-weight:300;
+}
+.red{
+    color:#ff5555;
+}
+nav{
+    padding-left:60px;
+}
+nav a{
+    line-height:80px;
+    padding-left:10px;
+    padding-right:10px;
+    font-weight:300;
+}
+nav a:hover{
+    color:#ff5555;
+    font-weight: 700;
+}
+.text-center{
+    text-align:center;
+}
+.text-right{
+    text-align:right;
+}
+a.nav-btn{
+    display:none;
+    position:absolute;
+    right:30px;
+    top:70px;
+}
+a.nav-btn>span{
+    font-size:30px;
+}
+
+nav span.bar{
+    border-right:1px solid #ddd;
+    width:1px;
+    height:12px;
+    margin-left:5px;
+    margin-right:5px;
+    display:inline-block;
+}
+a.close-btn{
+    display: none;
+}
+a.search{
+    line-height:80px;
+}
+/*** slider ***/
+.slider{
+    border-bottom:5px solid #000;
+}
+.slider>.container{
+    padding-bottom:100px;
+    background: url(../images/bg_feature.png) no-repeat right bottom;
+    background-size: 350px;
+}
+.slider ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    font-size:46px;
+    margin-top:35px;
+    font-weight:300;
+    color:#999;
+}
+
+.slider li a{
+    display:block;
+    position:relative;
+    width:70%;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.slider li a:hover span.list-text, .active{
+    font-weight:700;
+}
+/* .slider span.list-text{
+    display:inline-block;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+.slider span.cafe-text{
+    top:5px;
+    right:-50px;
+    font-size:14px;
+    font-weight:400;
+    color:#999;
+    vertical-align:top;
+}
+.container{
+    position: relative;
+}
+.container a .l-btn{
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    font-size: 80px;
+    color: #999;
+}
+.container a .r-btn{
+    position: absolute;
+    top: 200px;
+    right: -100px;
+    font-size: 80px;
+    color: #999;
+}
+
+/* mycafe */
+.mycafe{
+    padding:50px 0 40px;
+    background-color:#f8f8f8;
+    border-bottom:1px solid #efefef;
+}
+
+
+
+/************************for mobile**********************/
+@media screen and (max-width:768px) {
+    a.brand{
+        width:200px;
+        height:100px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:40px;
+        text-align:center;
+        font-size:40px;
+        font-weight:900;
+        color:#ff5555;
+        line-height:100px;
+        
+    }
+    a.nav-btn{
+        display:block;
+    }
+    nav.col-10{
+       /* display:none; */
+       height:100%;
+       width: 100%;
+       position:fixed;
+       top:0;
+       left:-100%;
+       background-color:rgb(0,0,0);
+       background-color: rgba(0,0,0,0.9); 
+       z-index:999;
+       transition: all 0.3s;
+    }
+    nav>.row{
+        position:relative;
+        top:10%;
+        width:100%;
+        text-align:center;
+        margin-top:10px;
+    }
+    nav>.row a{
+        padding:9px;
+        font-size:25px;
+        color:#818181;
+        display:block;
+        font-weight:500;
+        line-height:45px;
+    }
+    nav>.row a:hover{
+        color:#f1f1f1;
+    }
+    a.close-btn{
+        display: block;
+        position: absolute;
+        font-size: 40px;
+        color: #818181;
+        top: 55px;
+        right: 10px;
+        z-index: 999;
+    }
+    a.close-btn:hover{
+        color: #fff;
+    }
+    a.close-btn>span{
+        font-size: 35px;
+    }
+    a.slider>.container{
+        font-size: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .slider ul{
+        font-size: 18px;
+    }
+    .slider li a{
+        width: 95%;
+    }
+    .slider>.container{
+        background-size: 50%;
+    }
+
+}
