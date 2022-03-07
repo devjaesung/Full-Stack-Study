@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interval</title>
+</head>
+<body>
+    <div id="add">
+        <button onclick="clearInterval(an)">증가 중지</button>
+    </div>
+    <div id="sub">
+        <button onclick="clearInterval(sn)">감소 중지</button>
+    </div>
+
+    
+    
+
+    <script>
+        // var i=0;
+        // var intV=setInterval(function(){
+        //     i++;
+        //     document.getElementById("ct").innerHTML = i;
+        // },1000); //1000 = 1s
+
+        // clearInterval(intV); //interval 중지시킴
+        /*
+            1. 2초 간격으로 addNum을 1씩 증가
+            2. 2초 간격으로 subNum을 1씩 감소
+            3. 증가,감소를 정지시키는 버튼
+        */
+        var addNum=0;
+        var subNum=1000;
+        
+        var an=setInterval(function(){
+            addNum++;
+           console.log("addNum : " + addNum);
+
+        },1000);
+
+        var sn=setInterval(function(){
+            subNum--;
+            console.log("subNum : " + subNum);
+
+        },1000);
+
+
+    </script>
+</body>
+</html>

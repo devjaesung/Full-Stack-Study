@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor Function</title>
+</head>
+<body>
+    
+    <script>
+    //객체 생성자 함수
+    //기본타입
+    // function 함수명(매개변수1,매개변수2,매개변수3...){
+    //     this.속성명 = 새 값;
+    //     this.함수명 = function(){       
+    //      자바스크립트코드
+    //     }
+    // }
+    // var 참조변수 = new 함수명();
+
+    //gym entroll --> user : 이름,키,몸무게, 최소몸무게, 최대몸무게
+
+        function CheckWeight(name,height,weight){ //객체 생성자 함수명은 첫자를 대문자로 하는 것이 일반적인 약속
+            this.userName = name;   //객체를 생성하여 매개변수르 저장한다.
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxHeight;
+
+            this.getInfo = function(){ //정보를 선언하는 함수
+                var str = "";
+                str += "이름: " + this.userName + ", ";
+                str += "키: " + this.userHeight + ", ";
+                str += "몸무게: " + this.userWeight + ", ";
+                str += "<br>";
+                return str;
+            }
+
+            this.rsWeight = function(){ //최소,최대 몸무게를 계산하는 함수
+                this.minWeight = (this.userHeight - 100)*0.9 - 5;
+                this.maxHeight = (this.userHeight - 100)*0.9 + 5;
+
+                if(this.userWeight < this.minWeight){
+                    return "정상 몸무게보다 미달입니다.";
+                }else if(this.userWeight > this.minWeight){
+                    return "정상 몸무게보다 초과입니다.";
+                }else{
+                    return "정상 몸무게 입니다.";
+                }
+                     
+            }
+
+        }
+
+        var hong = new CheckWeight("홍길동",100,90);
+        var ahn =  new CheckWeight("안철수",160,40);
+
+        document.write(hong.getInfo());
+        document.write(hong.rsWeight());
+
+        document.write("<br>");
+        document.write(ahn.getInfo());
+        document.write(ahn.rsWeight());
+
+    </script>
+</body>
+</html>

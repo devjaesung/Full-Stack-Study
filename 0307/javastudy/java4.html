@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body id="change">
+    <button type="button" onclick="chcolor()">change color</button>
+    <p id="test"></p>
+
+    <script>
+        //1) 5개의 색상 중 1개가 랜덤으로 bodydp 적용되도록 코딩
+        var colors=["#ff0","#6c0","#fcf","#cf0","#39f"];
+        var i=0;
+
+        function chcolor(){
+  
+            i = Math.floor(Math.random()*colors.length);
+            document.getElementById("test").innerHTML= i ;
+            document.getElementById("change").style.backgroundColor = colors[i];
+           
+        }
+        document.write("<hr>");
+        //2) 객체 생성자 함수를 만들어 두 학생(a,b)의 객체를 생성하고 속성으로 이름, 국어점수, 영어점수를 등록. getTestInfo (이름,국어,영어 모두 출력하는 함수.) get Avg(영어,국어의 평균점수) 를 출력  
+
+        function TestScore(name,kor,eng){
+            this.userName = name;   
+            this.korNum = kor;
+            this.engNum = eng;
+            this.getTestInfo = function(){
+                document.write("이름:" + this.userName, "<br>");
+                document.write("국어:" + this.korNum, "<br>");
+                document.write("영어:" + this.engNum, "<br>");
+            }
+            this.getAvg = function(){
+                return (this.korNum + this.engNum)/2;
+            }
+        }
+        var tony = new TestScore("Tony",80,60);
+        var jason = new TestScore("Jason",75,85);
+
+        tony.getTestInfo();
+        document.write("평균점수 : " + tony.getAvg());
+        document.write("<br>");
+
+        jason.getTestInfo();
+        document.write("평균점수 : " + jason.getAvg());
+
+
+
+    </script>
+</body>
+</html>

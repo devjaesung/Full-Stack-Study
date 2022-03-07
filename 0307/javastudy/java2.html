@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scope Function</title>
+</head>
+<body>
+
+    <script>
+        // //함수 스코프(scope)
+        // /*
+        //     1. 스코프 : 변수 또는 함수의 유효범위
+        //     2. 지역변수(local var) : 스코프 영역에서 선언한 변수 -> 스코프 영역에서만 사용가능
+        // */
+
+        // var num="a"; //전역변수--> 모든 영역에서 사용가능
+
+        // function scopeFunc(){
+        //     var str = 0;
+
+        //     function innerScopeFunc(){//지역함수
+
+        //         // var str = 0; -->지역변수
+        //         document.write(str); 
+
+        //     }
+
+        //     innerScopeFunc(); //지역함수는 함수 안에서만 사용해야 함..!
+
+        // }
+        // //innerScopeFunc(); //innerScopeFunc는 scopeFunc 안에서만 사용가능하므로 단독으로 사용할 수 없음..!
+        // scopeFunc();
+        //console.log(str);
+/************************************************************************/
+        //ex1)
+
+        // var score=10;
+       
+        // function myFunc(){
+        //     var score=50; //지역변수라서 myFunc안에서만 값이 변함!
+        //     alert(score); //지역변수를 받음
+        // }
+        // myFunc();
+
+        // alert(score); //전역변수를 받음
+/***********************************************************************/
+        //ex2)
+        //     (function(){
+        //     var num =100;
+        //     function menu(){
+        //         num += 100;
+        //         alert(num);
+        //     }
+        //     menu();
+        // }());
+
+
+        //     (function(){
+        //         function menu(){
+        //         alert(num); //밑에 있는 함수가 마지막으로 실행되서 100이 출력됨 -->이러한 오류를 방지하기 위해 함수를 따로따로 묶어서 지역함수로 만들어냄.
+        //     }
+        // }());
+
+
+
+
+
+
+    </script>
+</body>
+</html>

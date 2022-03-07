@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body>
+    <h1 id="ch">child window</h1>
+    <button onclick="close()">close child window</button>
+    <button onclick="naver()">move parents window</button>
+
+    <script>
+        function close(){ //chrome에서 막아놓은듯..ㅜ
+            self.opener=self;
+            window.close();
+        }
+
+        function naver(){
+            window.open("java8.html","java8","width=400, height=500, left=100, top=50, scrollbars=no, location=yes");
+        }
+    </script>
+</body>
+</html>

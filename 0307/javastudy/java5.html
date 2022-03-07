@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browser Object Model</title>
+</head>
+<body>
+    
+    <button onclick="winopen('java1')">js1</button>
+    <button onclick="winopen('java2')">js2</button>
+    <button onclick="winopen('java3')">js3</button>
+    <button onclick="winopen('java4')">js4</button>
+    <button onclick="winopen('close-btn')">close button test</button>
+    <script>
+        //브라우저 객체 모델
+        function winopen(str){
+            var str = str + ".html";
+            window.open(str,"name","width=400, height=500, left=100, top=50, scrollbars=no, location=yes");
+        }
+        
+    </script>
+</body>
+</html>

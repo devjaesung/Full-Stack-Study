@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottom Menu</title>
+<style>
+    .container{
+        width: 1000px;
+        margin: 30px auto;
+        position: relative;
+        overflow: auto;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        
+    }
+    .tab{
+        display: flex;
+        position: relative;
+    }
+    .tab a{
+        display: block;
+        width: 100px;
+        text-decoration: none;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background-color: #efefef;
+        color: #999;
+        position: relative;
+        bottom: 2px;
+    }
+    .tab a:last-child{
+        border-right: 1px solid #ddd;
+    }
+    .tab a:hover, .tab a.active{
+        background-color: #fff;
+        color: #333;
+    }
+    .tabcontent{
+        border: 1px solid #ddd;
+        padding: 15px 30px;
+        display: none;
+        height: 500px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+    
+
+    <div class="tabcontent" id="a">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus convallis arcu, a lobortis neque semper ac. Curabitur tristique tempor dolor ac ultrices. Nullam vel facilisis mi, eget hendrerit quam. Cras condimentum nulla ut diam luctus mattis. Aliquam erat volutpat. Vestibulum feugiat augue quis ante tristique, nec rutrum nisl rutrum. Curabitur vulputate maximus urna eget facilisis. Nullam vitae nibh sed neque sagittis facilisis non eget eros.</p>
+    </div>
+    <div class="tabcontent" id="b">
+        <p>Vivamus facilisis elementum neque, eget laoreet mauris maximus ut. Curabitur sit amet sem interdum, pellentesque lacus at, eleifend metus. Aenean tellus nulla, volutpat eu sem sed, egestas rhoncus ex. Aliquam volutpat gravida urna quis dapibus. Quisque imperdiet libero maximus accumsan rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis vestibulum posuere orci vitae dapibus. Curabitur vel mattis magna. Duis eu orci a mauris dapibus dignissim. Suspendisse auctor gravida volutpat. Integer in dui dictum, dapibus enim eget, finibus sapien. Vestibulum euismod ante et nibh vulputate elementum.</p>
+    </div>
+    <div class="tabcontent" id="c">
+        <p>Quisque quis vestibulum erat. Duis volutpat pharetra semper. Mauris porttitor luctus elit, in aliquet nibh consequat vitae. Aliquam erat volutpat. Nam varius lacus semper sem dictum, ut porta nulla fermentum. Duis urna nulla, mollis vitae elementum tempor, dignissim at lorem. Mauris dapibus rutrum ultrices. Proin nibh nisi, consequat at ante non, euismod feugiat nunc. In vitae ligula venenatis mi posuere ornare eu sed ex. Donec non interdum magna, id tincidunt elit. Nunc ultrices at magna eu rutrum. Nam tempus consequat tempus.</p>
+    </div>
+    <div class="tab">
+
+        <a href="javascript:void(0)" class="tablinks" onclick="tab(event,'a')">탭1</a>
+        <a href="javascript:void(0)" class="tablinks" onclick="tab(event,'b')">탭2</a>
+        <a href="javascript:void(0)" class="tablinks" onclick="tab(event,'c')">탭3</a>
+    </div>
+    </div>
+
+    <script>
+
+        document.getElementById("a").style.display="block"; //첫번째 내용을 block시겨서 보이게함
+
+        //메뉴의 순서를 변수에 저장
+        var tablinks = document.getElementsByClassName("tablinks");
+
+        //내용의 순서를 변수에 저장
+        var tabcontent = document.getElementsByClassName("tabcontent");
+
+        //첫번째 메뉴에 active 클래스를 추가
+        tablinks[0].className += " active";
+
+
+        function tab(e,tabname){
+            //메뉴의 onclick함수가 실행되면 event정보와 매개변수를 받는다.
+            var i;
+
+            //내용의 개수만큼 for문을 돌며 내용을 지움.
+            for(i=0;i<tabcontent.length;i++){ 
+                tabcontent[i].style.display="none";
+            }
+
+            //메뉴의 개수만큼 for문을 돌며 메뉴의 active 클래스를 삭제
+            for(i=0;i<tablinks.length;i++){ 
+                tablinks[i].className = tablinks[i].className.replace(" active","");
+            }
+            
+            //누른 곳의 event 정보를 받아 그곳에 클래스를 추가
+            e.currentTarget.className += " active"; 
+
+            //누른 곳의 매개변수를 받아 그곳을 보이게 처리
+            document.getElementById(tabname).style.display="block";
+        }
+    </script>
+</body>
+</html>

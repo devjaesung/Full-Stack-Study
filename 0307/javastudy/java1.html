@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursion Function</title>
+</head>
+<body>
+    
+    
+    <script>
+        
+            // function myFunc(){
+                
+            //     myFunc(); //재귀함수(함수 안에 있는 자신의 함수)
+            // }
+
+        var num=0;
+        function countFunc(){
+            num++;
+            document.write(num,"<br>");
+            if(num==10){return;}
+            countFunc(); //재귀함수를 사용해서 for문 처럼 반복됨.
+           
+        }
+
+            countFunc();
+
+            
+    
+
+    </script>
+</body>
+</html>

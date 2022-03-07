@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeouot</title>
+</head>
+<body>
+<h1 id="time"></h1>
+
+<script>
+    // var addNum=0;
+    // var auto=setTimeout(function(){
+    //         addNum++;
+    //        document.write("addNum : ",addNum);
+
+    //     },2000); //한번만 실행됨
+
+    //디지털시계 만들기
+
+    setInterval(digiWatch,1000);
+    
+    function digiWatch(){
+        var time = new Date();
+        document.getElementById("time").innerHTML = time.toLocaleTimeString();
+    }
+
+</script>
+</body>
+</html>

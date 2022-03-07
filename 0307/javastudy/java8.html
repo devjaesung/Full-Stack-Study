@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>location</title>
+</head>
+
+<body>
+
+    <h1 id="pr">parents window</h1>
+    <button onclick="naver(0)">네이버 바로가기</button>
+    <button onclick="naver(1)">새로고침</button>
+
+    <script>
+        function naver(e){
+        if(e){
+            location.reload();
+        }else{
+            location.href = "https://naver.com";
+        }
+        }   
+    </script>
+</body>
+</html>

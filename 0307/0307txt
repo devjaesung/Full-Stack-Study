@@ -1,0 +1,45 @@
+[screen객체] - 화면의 크기
+
+screen.width = 모니터의 넓이
+screen.height = 모니터의 높이
+
+screen.availWidth = 작업표시줄 빼고 화면 넓이
+screen.availHeight = 작업표시줄 빼고 화면 높이
+
+screen.colorDepth = 모니터가 표현 가능한 컬러 bit
+
+[location 객체]
+location.속성
+location.메소드()
+location.href
+
+location.hash = URL의 해시'#'값을 가져옴 ;(#인스타 #... #맛집)
+location.hostname = 호스트 이름 설정하거나 반환
+location.host = 호스트 이름과 포트번호를 설정, 반환
+location.protocol = url의 프로토콜을 반환 (http / https)
+location.search = 쿼리값을 반환
+location.reload = 새로고침
+
+[histroy 객체]
+hisroty.속성
+history.메소드()
+history.메소드(n)
+
+history.back = 이전 페이지
+history.forward = 다음 페이지
+history.go(-1) = 한단계 앞에 페이지
+history.length = 방문 기록에 저장된 목록의 개수를 반환
+
+[navigator 객체]
+
+navigator 객체
+navigator.속성
+
+navigator.appCodeName = 현재 브라우저의 코드네임 반환(현 시점의 모든 브라우저는 Mozilla를 반환함)
+navigator.appName =  현재 브라우저의 이름(현시점 모든 브라우저는 Netscape를 반환)  
+navigator.appVersion = 버전정보: 현 시점 5.0반환
+navigator.language = 브라우저 언어 반환 (ko)
+navigator.product = 브라우저 엔진 (chrome gecko)
+navigator.platform = 운영체제 정보
+navigator.onLine = 온라인 상태 (인터넷 연결되어 있으면 true)
+navigator.userAgent = 브라우저와 운영체제의 종합정보
