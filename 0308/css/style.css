@@ -1,0 +1,78 @@
+*{box-sizing: border-box;}
+img{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+
+}
+nav>a{
+    display: block;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 18px;
+    font-size: 17px;
+
+}
+nav>a.active{
+    background-color:slategrey;
+    color: #fff;
+}
+nav>a:hover{
+    background-color: slategrey;
+    color: #fff;
+}
+nav>a.mobile-icon{
+    padding: 0;
+    width: 35px;
+    height: 30px;
+    margin-top: 15px;
+    display: none;
+}
+nav>a.mobile-icon span{
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    height: 3px;
+    width: 90%;
+    background-color: #ddd;
+}
+nav>a.mobile-icon:hover span{ 
+    background-color: #999;
+}
+nav>a.mobile-icon:hover{
+    background-color: transparent; /*호버 할때 바뀌는 배경색 지워줌*/
+}
+@media screen and (max-width: 600px) { /*모바일이 메인이면 min-width로 제작*/
+    nav{
+        flex-direction: column;
+        position: relative;
+        
+    }
+    nav>a:not(:first-child){ /*첫번째 자식을 제외함*/
+        display: none;
+    }
+    nav>a.mobile-icon{
+        display: block;
+
+        /*메뉴바가 우측상단으로 오게 함*/
+        position: absolute;
+        right: 10px;
+        top: -5px;
+    }
+    nav.submenu>a{
+        display: block;
+    }
+}

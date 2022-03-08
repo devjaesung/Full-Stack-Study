@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+</head>
+<body>
+    <!-- <p id="p1" style="color: green;">태그1</p>
+    <form>
+        <p>
+            <input type="button" value="bt1" onclick="showFirstAttr">
+            <input type="text" id="result">
+
+        </p>
+
+    </form> -->
+
+    <p><a href="#" id="test" target="_blank">링크이동</a></p>
+
+    <script>
+        // function showFirstAttr(){
+        //     var firstP = document.getElementById("p1");
+        //     var resultText = document.getElementById("result");
+        //     if(firstP.hasAttributes()){
+        //         var attrs = firstP.attributes;
+        //         var text ="";
+        //         for(var i = attrs.length-1; i>=0; i--){
+        //             text += attrs[i].name + "->" + attrs[i].value;
+        //         }
+        //         resultText.value = text;
+        //     }else{
+        //         resultText.value = "no text in here.";
+        //     }
+        // }
+
+            document.getElementById('text').setAttribute('href','https://naver.com');
+
+    </script>
+</body>
+</html>

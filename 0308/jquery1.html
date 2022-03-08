@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+<script src="js/jquery-1.12.4.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 웹으로도 연동이 가능함!!!-->
+<script>
+    // $(document).ready(function(){}); -->기본 틀
+    // $(function(){}); -->축약
+
+    $(document).ready(function(){
+        // $(셀렉트).메소드();
+
+        $('button').click(function(){ //selector
+            $('.p1').hide(); 
+        });
+
+    });
+
+</script>
+</head>
+<body>
+    <p class="p1">Hello!</p>
+    <p id="p1">Nice to meet you!</p>
+    <button>delete</button>
+</body>
+</html>
