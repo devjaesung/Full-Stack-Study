@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .mycar {
+        position: absolute;
+        left: 100px;
+        text-align: center;
+        width: 60px;
+        height: auto;
+        transform: rotate(180deg);
+      }
+      .cld {
+        position: absolute;
+        bottom: -75px;
+        left: 15px;
+        display: none;
+      }
+      .park {
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border: 5px solid orange;
+        border-top: none;
+      }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var px = parseInt($(".park").position().left);
+        var py = parseInt($(".park").position().top);
+        console.log(px, py);
+
+        $(document).keydown(function (e) {
+          console.log(e.keyCode); //화살표 위 = 38, 아래=40
+
+          switch (e.keyCode) {
+            case 37: //왼쪽
+              $(".mycar").css("transform", "rotate(270deg)");
+              $(".cld").show();
+              $(".mycar")
+                .stop()
+                .animate({ left: "-=100px" }, 500, function () {
+                  $(".cld").hide();
+                  cx = $(this).position().left;
+                  cyx = $(this).position().top;
+                  console.log(cx, cy);
+                });
+              break;
+            case 38: //위쪽
+              $(".mycar").css("transform", "rotate(0deg)");
+              $(".cld").show();
+              $(".mycar")
+                .stop()
+                .animate({ top: "-=100px" }, 500, function () {
+                  $(".cld").hide();
+                  cx = $(this).position().left;
+                  cy = $(this).position().top;
+                  console.log(cx, cy);
+                });
+              break;
+            case 39: //오른쪽
+              $(".mycar").css("transform", "rotate(90deg)");
+              $(".cld").show();
+              $(".mycar")
+                .stop()
+                .animate({ left: "+=100px" }, 500, function () {
+                  $(".cld").hide();
+                  cx = $(this).position().left;
+                  cy = $(this).position().top;
+                  console.log(cx, cy);
+                });
+              break;
+            case 40: //아래쪽
+              $(".mycar").css("transform", "rotate(180deg)");
+              $(".cld").show();
+              $(".mycar")
+                .stop()
+                .animate({ top: "+=100px" }, 500, function () {
+                  $(".cld").hide();
+                  cx = $(this).position().left;
+                  cy = $(this).position().top;
+                  console.log(cx, cy);
+                });
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="mycar">
+      <img src="images/car.png" alt="car" />
+      <img src="images/fart.gif" alt="fart" class="cld" />
+    </div>
+    <div class="park"></div>
+  </body>
+</html>
