@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <style>
+
+        .traversing, .traversing *{
+            display: block;
+            border: 2px solid #999;
+            color: #999;
+            padding: 5px;
+            margin: 15px;
+        }
+        div{
+            width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+  </head>
+  <body class="traversing">
+      body
+    <div>
+        <p>1번입니다</p>
+        <p>2번입니다</p>
+        <p>3번입니다</p>
+        <p>4번입니다</p>
+        <p>5번입니다</p>
+      <ul>
+          ul
+        <li>
+            li
+            <span>span</span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // $('span').parentsUntil('div').css({'color': 'red', 'border': '2px solid red'}); //span의 조상인 li부터 div전까지만 바뀜
+
+            // $('div').children().css({'color': 'blue', 'border': '2px solid blue'}); //span의 조상인 li부터 div전까지만 바뀜
+
+            $('p').eq(2).css({'color': 'blue', 'border': '2px solid blue'});
+        });
+    </script>
+  </body>
+</html>

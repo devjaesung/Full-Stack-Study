@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>canavs</title>
+<style>
+    #myCanvas{
+        border: 1px solid #333;
+    }
+</style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200px" height="200px">
+         <!--width,height는 stylesheet말고 태그 안에 직접 주자!-->
+
+    </canvas>
+
+    <button onclick="draw()">draw</button>
+    <!-------------------script--------------------->
+    <script>
+        /*선그리기
+        ctx.moveTo(0.0);
+        ctx.lineTo(300,150);
+        ctx.stroke();
+        */
+       /*원그리기
+       ctx.beginPath();
+       ctx.arc(95, 50, 40, 0, 2*Math.PI);
+       ctx.stroke();
+        */
+        // 색 채우기
+        // ctx.fillRect(10,10,50,50);
+        // ctx.fillStyle = "rgb(200,0,0)";
+
+        function draw(){
+            var c= document.getElementById("myCanvas");
+        if(c.getContext){
+            var ctx =c.getContext("2d");
+
+            // ctx.fillRect(25,25,100,100);
+            // ctx.clearRect(50,50,50,50); /*가운데 구멍 뚫기(배경색을 칠해줌)*/
+
+            //삼각형 그리기
+            // ctx.beginPath();
+            // ctx.moveTo(75,50);
+            // ctx.lineTo(100,75);
+            // ctx.lineTo(100,25);
+            // ctx.fill();
+
+            // smiley 그리기
+            // ctx.beginPath();
+            // ctx.arc(75, 75, 50, 0, Math.PI*2, true); //전체 원
+            // ctx.moveTo(110,75); //펜을 다른 위치로 이동시킴
+            // ctx.arc(75, 75, 35, 0, Math.PI, false); //입
+            // ctx.moveTo(65,65);
+            // ctx.arc(60,65,5,0,Math.PI*2,true); //왼쪽 눈 
+            // ctx.moveTo(95,65)
+            // ctx.arc(90,65,5,0,Math.PI*2,true); //오른쪽 눈
+            // ctx.stroke();
+
+            //도형 이동하기
+            ctx.fillRect(0,0,50,50);
+            ctx.translate(25,25);
+            ctx.fillStyle = 'red';
+            ctx.fillRect(25,25,50,50);
+
+        }};
+           
+
+    </script>
+</body>
+</html>
