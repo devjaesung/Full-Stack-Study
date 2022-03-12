@@ -1,274 +1,411 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>도움카페</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="css/grid.css">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <div class="container">
-       <!-- header -->
-       <header>
-           <div class="row">
-                <div class="col-2 col-tb-12">
-                    <a class="brand" href="#">
-                       <span class="material-icons">flutter_dash</span> CAFE
-                    </a>
-                </div>
-                <a href="javascript:void(0);" class="nav-btn" onclick="openNav()"><span class="material-icons">density_medium</span></a>
-                <nav class="col-10" id="mynav">
-                    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"><span class="material-icons">close</span></a>
-                    <div class="row">
-                       <div class="col-8 col-tb-12">
-                           <a href="#" class="weight red">홈</a>
-                           <a href="#">팬카페</a>
-                           <a href="#">카페랭킹</a>
-                           <a href="#">내카페</a>
-                           <span class="bar"></span>
-                           <a href="#" class="red">온라인교실</a>
-                       </div>
-                       <div class="col-4 col-tb-12 text-right">
-                          <a href="#" class="search"><span class="material-icons">search</span></a>
-                       </div>
-                    </div>
-                </nav>
-           </div>
-       </header>
-    </div> 
-       <!-- /header --> 
-       <div class="slider">
-            <div class="container relative">
-                <!-- 이전, 다음 버튼 -->
-                <a href="javascript:void(0)" class="prev" onclick="pSlide(-1)">
-                    <span class="material-icons">arrow_back_ios</span>
-                </a>     
-                <a href="javascript:void(0)" class="next" onclick="pSlide(1)">
-                    <span class="material-icons">arrow_forward_ios</span>
-                </a>    
-               <!-- /. 이전 다음-->
-               <!-- loop -->
-                <div class="slidein">
-                <h3><span class="light">이야기 하나</span> '밥친구' 하기 좋은 유튜버 리스트</h3>
-                <ul>
-                    <li class="active">
-                        <a href="#"><span class="list-text">여행 유튜버가 흥정에 지지 않는 택시기...</span> <span class="cafe-text">여행하기</span></a>
-                    </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도움카페</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-                    <li>
-                        <a href="#"><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span><span class="cafe-text">*여성시대</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span><span class="cafe-text">옆집언니</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span><span class="cafe-text">먹방시대</span></a> 
-                    </li>                                       
-                </ul>
-              </div>
-
-
-
-              <div class="slidein">
-                <h3><span class="light">이야기 둘</span> 중고차 사기전에 필독</h3>
-                <ul>
-                    <li class="active">
-                        <a href="#"><span class="list-text">여행 유튜버가 흥정에 지지 않는 택시기...</span> <span class="cafe-text">여행하기</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span><span class="cafe-text">*여성시대</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span><span class="cafe-text">옆집언니</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span><span class="cafe-text">먹방시대</span></a> 
-                    </li>                                       
-                </ul>
-              </div>
-
-
-              <div class="slidein">
-                <h3><span class="light">이야기 셋</span> 다시는 중고차를 무시하지마라</h3>
-                <ul>
-                    <li class="active">
-                        <a href="#"><span class="list-text">여행 유튜버가 흥정에 지지 않는 택시기...</span> <span class="cafe-text">여행하기</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span><span class="cafe-text">*여성시대</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span><span class="cafe-text">옆집언니</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span><span class="cafe-text">먹방시대</span></a> 
-                    </li>                                       
-                </ul>
-              </div>
-
-
-
-              <div class="slidein">
-                <h3><span class="light">이야기 넷</span> 매일 쓰면서 몰랐던 두뇌 설명서</h3>
-                <ul>
-                    <li class="active">
-                        <a href="#"><span class="list-text">여행 유튜버가 흥정에 지지 않는 택시기...</span> <span class="cafe-text">여행하기</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span><span class="cafe-text">*여성시대</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span><span class="cafe-text">옆집언니</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span><span class="cafe-text">먹방시대</span></a> 
-                    </li>                                       
-                </ul>
-              </div>
-
-
-
-              <div class="slidein">
-                <h3><span class="light">이야기 다섯</span> 오늘도 기상천외한 당근마켓근황</h3>
-                <ul>
-                    <li class="active">
-                        <a href="#"><span class="list-text">여행 유튜버가 흥정에 지지 않는 택시기...</span> <span class="cafe-text">여행하기</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span><span class="cafe-text">*여성시대</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span><span class="cafe-text">옆집언니</span></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><span class="list-text">역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span><span class="cafe-text">먹방시대</span></a> 
-                    </li>                                       
-                </ul>
-              </div>
-            <!-- /. loop -->
-
-            </div>
-       </div>
-       <!--------------my cafe---------------->
-       <div class="mycafe">
-           <div class="container">
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <div class="row">
+          <div class="col-2 col-tb-12">
+            <a class="brand" href="#">
+              <span class="material-icons">flutter_dash</span> CAFE
+            </a>
+          </div>
+          <a href="javascript:void(0);" class="nav-btn" onclick="openNav()"
+            ><span class="material-icons">density_medium</span></a
+          >
+          <nav class="col-10" id="mynav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+              ><span class="material-icons">close</span></a
+            >
             <div class="row">
-                <!--loop-->
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t01.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t02.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t03.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t04.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t05.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4 col-tb-6 py-15">
-                    <a href="#" class="card">
-                        <div class="img-thumb" style="background-image: url(images/t06.jpg);">
-                        </div>
-                        <div class="card-contents ellipsis">
-                            <h3>바이크조아</h3>
-                            <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
-                            <p class="hash ellipsis">
-                                <span class="act">추천카페</span>
-                                <span>바이크조아</span>
-                                <span>혼다</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <!--/loop-->
+              <div class="col-8 col-tb-12">
+                <a href="#" class="weight red">홈</a>
+                <a href="#">팬카페</a>
+                <a href="#">카페랭킹</a>
+                <a href="#">내카페</a>
+                <span class="bar"></span>
+                <a href="#" class="red">온라인교실</a>
+              </div>
+              <div class="col-4 col-tb-12 text-right">
+                <a href="#" class="search"
+                  ><span class="material-icons">search</span></a
+                >
+              </div>
             </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!-- /header -->
+    <div class="slider">
+      <div class="container relative">
+        <!-- 이전, 다음 버튼 -->
+        <a href="javascript:void(0)" class="prev" onclick="pSlide(-1)">
+          <span class="material-icons">arrow_back_ios</span>
+        </a>
+        <a href="javascript:void(0)" class="next" onclick="pSlide(1)">
+          <span class="material-icons">arrow_forward_ios</span>
+        </a>
+        <!-- /. 이전 다음-->
+        <!-- loop -->
+        <div class="slidein">
+          <h3>
+            <span class="light">이야기 하나</span> '밥친구' 하기 좋은 유튜버
+            리스트
+          </h3>
+          <ul>
+            <li class="active">
+              <a href="#"
+                ><span class="list-text"
+                  >여행 유튜버가 흥정에 지지 않는 택시기...</span
+                >
+                <span class="cafe-text">여행하기</span></a
+              >
+            </li>
 
-           </div>
-       </div>
-       
-       
+            <li>
+              <a href="#"
+                ><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span
+                ><span class="cafe-text">*여성시대</span></a
+              >
+            </li>
 
-       <script src="js/script.js"></script>
-</body>
+            <li>
+              <a href="#"
+                ><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span
+                ><span class="cafe-text">옆집언니</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text"
+                  >역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span
+                ><span class="cafe-text">먹방시대</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="slidein">
+          <h3><span class="light">이야기 둘</span> 중고차 사기전에 필독</h3>
+          <ul>
+            <li class="active">
+              <a href="#"
+                ><span class="list-text"
+                  >여행 유튜버가 흥정에 지지 않는 택시기...</span
+                >
+                <span class="cafe-text">여행하기</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span
+                ><span class="cafe-text">*여성시대</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span
+                ><span class="cafe-text">옆집언니</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text"
+                  >역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span
+                ><span class="cafe-text">먹방시대</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="slidein">
+          <h3>
+            <span class="light">이야기 셋</span> 다시는 중고차를 무시하지마라
+          </h3>
+          <ul>
+            <li class="active">
+              <a href="#"
+                ><span class="list-text"
+                  >여행 유튜버가 흥정에 지지 않는 택시기...</span
+                >
+                <span class="cafe-text">여행하기</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span
+                ><span class="cafe-text">*여성시대</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span
+                ><span class="cafe-text">옆집언니</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text"
+                  >역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span
+                ><span class="cafe-text">먹방시대</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="slidein">
+          <h3>
+            <span class="light">이야기 넷</span> 매일 쓰면서 몰랐던 두뇌 설명서
+          </h3>
+          <ul>
+            <li class="active">
+              <a href="#"
+                ><span class="list-text"
+                  >여행 유튜버가 흥정에 지지 않는 택시기...</span
+                >
+                <span class="cafe-text">여행하기</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span
+                ><span class="cafe-text">*여성시대</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span
+                ><span class="cafe-text">옆집언니</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text"
+                  >역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span
+                ><span class="cafe-text">먹방시대</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="slidein">
+          <h3>
+            <span class="light">이야기 다섯</span> 오늘도 기상천외한
+            당근마켓근황
+          </h3>
+          <ul>
+            <li class="active">
+              <a href="#"
+                ><span class="list-text"
+                  >여행 유튜버가 흥정에 지지 않는 택시기...</span
+                >
+                <span class="cafe-text">여행하기</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">훈수충이 없는 운동 유튜버.jpg </span
+                ><span class="cafe-text">*여성시대</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text">입짧은햇님 케이크 먹방 특징.gif </span
+                ><span class="cafe-text">옆집언니</span></a
+              >
+            </li>
+
+            <li>
+              <a href="#"
+                ><span class="list-text"
+                  >역대급 킹받는다는 침착맨 킹뚜껑 먹방.jpg </span
+                ><span class="cafe-text">먹방시대</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /. loop -->
+      </div>
+    </div>
+    <!--------------my cafe---------------->
+    <div class="mycafe">
+      <div class="container">
+        <div class="row">
+          <!--loop-->
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t01.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t02.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t03.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t04.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t05.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-4 col-tb-6 py-15">
+            <a href="#" class="card">
+              <div
+                class="img-thumb"
+                style="background-image: url(images/t06.jpg)"
+              ></div>
+              <div class="card-contents ellipsis">
+                <h3>바이크조아</h3>
+                <p class="title-info ellipsis">중고부속, 용품, 기타 튜닝</p>
+                <p class="hash ellipsis">
+                  <span class="act">추천카페</span>
+                  <span>바이크조아</span>
+                  <span>혼다</span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <!--/loop-->
+        </div>
+      </div>
+    </div>
+    <!----------------카페 인기글-------------->
+    <div class="container pt pb">
+      <div class="row">
+        <div class="col-8 col-tb-12 .pr15">
+          <div class="d-flex space-bet pb">
+            <h2 class="c-title">카페 인기글</h2>
+            <p class="dt"></p>
+          </div>
+          <!--목록-->
+          <ul class="list-pop">
+              
+              <!--loop-->
+            <li>
+              <a href="#" target="_blank" class="list">
+                <div class="row align-items-center">
+                  <div class="img-thumb2 col-2">
+                      <img src="images/t01.jpg" alt="01">
+                  </div>
+                  <div class="contents-pop col-6">
+                      <h3><strong>1</strong> 12년만에 핸드폰 바꾼 사람</h3>
+                  </div>
+                  <div class="cafe-pop col-2">
+                      <p>도탁스(Dotacks)</p>
+                  </div>
+                  <div class="sub-pop col-2">
+                      <p>댓글 <span>15</span></p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!--/loop-->
+          </ul>
+        </div>
+        <div class="col-4 col-tb-12">
+          <h2>공지</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
