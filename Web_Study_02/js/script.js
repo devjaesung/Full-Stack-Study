@@ -35,5 +35,18 @@ function autoSlide(){
 }
 setInterval(autoSlide,5000);
 
-/***************************my cafe**************************** */
+/***************************popular cafe**************************** */
 
+function gTime(){
+var dt = new Date();
+var y = dt.getFullYear();
+var m = dt.getMonth()+1;
+var d = dt.getDate();
+var hh = dt.getHours();
+var mm = dt.getMinutes();
+var ss = dt.getSeconds(); 
+
+document.getElementsByClassName('dt')[0].innerHTML = y+"."+m+"."+d+" <span>"+hh+"시"+mm+"분"+ss +"초</span>";
+
+}
+setInterval(gTime,1000);
