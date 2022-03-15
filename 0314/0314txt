@@ -1,0 +1,18 @@
+[프로그래밍 언어 분류]
+    -   기계어 : 0,1 로 구성
+    -   어셈블리어 : 영어 약자기호로 표기
+    -   고급언어 : C, C++, Java, Fortran, ...  -->문장으로 표기
+
+    -   컴파일 언어 : C, C++, Java
+    -    인터프리터언어 : JavaScript 
+
+
+
+- xl : extra large 1200px 이상
+- lg : large 992px
+- md : medium 768px
+- sm : small 576px
+
+- mt : margintop
+- mb :
+- pt : padding top 
