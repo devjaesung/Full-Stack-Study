@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>My Gallery</h2>
+    <div class="container">
+         <div class="mySlides">
+             <div class="number">1 / 6</div>
+             <img src="images/001.jpg" alt="001">
+         </div>
+         <div class="mySlides">
+             <div class="number">2 / 6</div>
+             <img src="images/002.jpg" alt="002">
+         </div>
+         <div class="mySlides">
+             <div class="number">3 / 6</div>
+             <img src="images/003.jpg" alt="003">
+         </div>
+         <div class="mySlides">
+             <div class="number">4 /6</div>
+             <img src="images/004.jpg" alt="004">
+         </div>
+         <div class="mySlides">
+             <div class="number"> 5 /6 </div>
+             <img src="images/005.jpg" alt="005">
+         </div>
+         <div class="mySlides">
+             <div class="number"> 6 /6 </div>
+             <img src="images/006.jpg" alt="006">
+         </div>
+         <a href="javascript:void(0)" class="prev" onclick="plusSlides(-1)">&lt;</a>
+         <a href="javascript:void(0)" class="next" onclick="plusSlides(1)">&gt;</a>
+
+         <div class="caption-container">
+             <p id="caption"></p>
+         </div>
+ 
+         <div class="row">
+             <div class="column">
+                 <img src="images/001.jpg" alt="카페2층" class="opacity cursor" onclick="currentSlides(1)">
+             </div>
+             <div class="column">
+                <img src="images/002.jpg" alt="카페에서 냉커피" class="opacity cursor" onclick="currentSlides(2)">
+            </div>
+            <div class="column">
+                <img src="images/003.jpg" alt="모두 가본 뉴욕거리" class="opacity cursor" onclick="currentSlides(3)">
+            </div>
+            <div class="column">
+                <img src="images/004.jpg" alt="우리집" class="opacity cursor" onclick="currentSlides(4)">
+            </div>
+            <div class="column">
+                <img src="images/005.jpg" alt="미슈링쓰리스타" class="opacity cursor" onclick="currentSlides(5)">
+            </div>
+            <div class="column">
+                <img src="images/006.jpg" alt="모자쓰고도망" class="opacity cursor" onclick="currentSlides(6)">
+            </div>
+         </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

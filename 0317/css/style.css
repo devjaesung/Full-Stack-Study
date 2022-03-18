@@ -1,0 +1,75 @@
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    font-size:16px;
+    font-family:sans-serif;
+}
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+img{
+    vertical-align: middle;
+    max-width:100%;
+}
+.container{
+    position:relative;
+    max-width:100%;
+    width:1200px;
+    margin:0 auto;
+}
+.mySlides{
+    display:none;
+}
+.next,.prev{
+    font-size:40px;
+    color:#fff;
+    cursor:pointer;
+    top:40%;
+    width:auto;
+    padding:16px;
+    margin-top:-50px;
+    font-weight:bold;
+    border-radius: 0 3px 3px 0;
+    position:absolute;
+    user-select: none;  /* 드래그 막기 */
+    text-decoration: none;
+}
+.next{
+    right:0;
+    border-radius:3px 0 0 3px;
+}
+.prev:hover,
+.next:hover{
+    background-color:rgba(255,255,255,0.8);
+}
+.number{
+    color:#f2f2f2;
+    font-size:13px;
+    padding:8px 13px;
+    position:absolute;
+    top: 0;
+}
+.caption-container{
+    text-align:center;
+    background:#333;
+    padding:2px 16px;
+    color:#fff;
+}
+.row{
+    display:flex;
+}
+.column{
+    width:16.66667%;
+}
+
+.opacity{
+    opacity: 0.6;
+}
+
+.active, .opacity:hover{
+    opacity:1;
+}
+.cursor{
+    cursor:pointer;
+}
