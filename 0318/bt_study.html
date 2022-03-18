@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('img').click(function(){
+            let src = $(this).attr('src');
+            if($(this).css('position')=='absolute'){
+                $(this).css('position','static');
+                $(this).addClass('img-fluid');
+            }else{
+                $(this).css('position','absolute').css('z-index',2)
+                $(this).removeClass('img-fluid');
+            }
+        })
+
+    });
+  
+</script>
+</head>
+<body>
+    <!--1. 모서리 둥글게 rounded 
+        2. 전체를 둥글게 rounded-circle
+        3. 여백 주기 img-thumbnail
+        4. 반응형 옵션 img-fluid(max-width=100%)
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="imgbox">
+                <img src="images/t01.jpg" alt="01" class="img-fluid rounded">
+            </div>
+            <div class="imgbox">
+                <img src="images/t06.jpg" alt="02" class="img-fluid rounded-circle">
+            </div>
+            <div class="imgbox">
+                <img src="images/t03.jpg" alt="03" class="img-fluid img-thumbnail">
+            </div>
+            <div class="imgbox">
+                <img src="images/t04.jpg" alt="04" class="img-fluid">
+            </div>
+            
+        </div>
+            <div class="box">
+                <img src="images/t01.jpg" alt="01" class="float-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare arcu et diam efficitur, eu sollicitudin velit venenatis. Vestibulum interdum justo non gravida molestie. Mauris nec blandit leo. Sed at egestas ipsum. Phasellus nec massa sit amet elit suscipit convallis at ac lectus. Nulla ultricies a lacus et interdum. Quisque ipsum lacus, scelerisque ut efficitur ac, maximus iaculis ex. Proin a venenatis ante, non accumsan metus. Donec placerat eros tortor, porta interdum velit iaculis vitae. Sed dignissim leo lacus, vitae blandit turpis tempus eu. Etiam ultrices neque enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed porttitor turpis id sollicitudin congue. In hac habitasse platea dictumst. Mauris ipsum risus, efficitur nec pharetra ac, volutpat vel justo. Duis faucibus leo enim, quis ultricies nunc malesuada semper.
+            </div>
+            <div class="box">
+                <img src="images/t03.jpg" alt="01" class="float-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare arcu et diam efficitur, eu sollicitudin velit venenatis. Vestibulum interdum justo non gravida molestie. Mauris nec blandit leo. Sed at egestas ipsum. Phasellus nec massa sit amet elit suscipit convallis at ac lectus. Nulla ultricies a lacus et interdum. Quisque ipsum lacus, scelerisque ut efficitur ac, maximus iaculis ex. Proin a venenatis ante, non accumsan metus. Donec placerat eros tortor, porta interdum velit iaculis vitae. Sed dignissim leo lacus, vitae blandit turpis tempus eu. Etiam ultrices neque enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed porttitor turpis id sollicitudin congue. In hac habitasse platea dictumst. Mauris ipsum risus, efficitur nec pharetra ac, volutpat vel justo. Duis faucibus leo enim, quis ultricies nunc malesuada semper.
+            </div>
+            <div class="box">
+                <img src="images/t04.jpg" alt="01" class="d-block mx-auto">
+            </div>
+    </div>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Bootstrap jumbotron box</h1>
+        <p>부트스트랩은 웹에서 반응형 모바일 우선 프로젝트를 개발하기 위해 사용됩니다.</p>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Alert!</strong>
+    </div>
+    <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Alert!</strong>
+    </div>
+    <div class="alert alert-primary alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Alert!</strong>
+    </div>
+    <div class="alert alert-secondary alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Alert!</strong>
+    </div>
+</div>
+<button type="button" class="btn btn-primary">기본타입</button>
+<button type="button" class="btn btn-outline-primary">기본타입</button>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

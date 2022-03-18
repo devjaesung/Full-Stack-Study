@@ -1,0 +1,13 @@
+.imgbox{
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 15px;
+    position: relative;
+}
+.box{
+    margin-top: 15px;
+    height: 200px;
+}
+.box img{
+    height: 200px;
+}
