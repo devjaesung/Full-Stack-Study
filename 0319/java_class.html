@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS_Class</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <p>함수를 포장하는 기술, 객체의 탬플릿</p>
+    <p>클래스의 기본단위 - 생성자와 메소드(함수)</p>
+    <p>클래스명은 대문자로 시작</p>
+    <p>객체 단위로 코드를 그룹화하고 재사용하기 위해 사용한다.</p>
+    <ul>
+        <li><h4>객체</h4>
+            <p>자바스크립트는 개체기반언어이고 자바스크립트를 이루고 있는 모든 것이 객체이다.</p>
+            <p>정확히는 원시타입을 제외한 모든 것</p>
+            <p>객체는 프로퍼티로 구성</p>
+        </li>
+        <li><h4>인스턴스</h4>
+            <p>클래스를 사용하려면 일반적으로 인스턴스를 생성해서 사용</p>
+            <p>한 페이지 내에 두 개 이상의 같은 동작을 하는 ui를 만들경우 두 개의 클래스를 만드는 것이 아니라 하나의 클래스에 두 개의 인스턴스를 만들어 사용한다.</p>
+        </li>
+        <li><h4>프로퍼티</h4>
+            <p>클래스 내부에 만드는 변수 (멤버면수)</p>
+            <p>프로퍼티는 key와 value로 구성된다.</p>
+            <p>프로퍼티가 함수일 경우 메소드라 한다.</p>
+        </li>
+        <li><h4>메소드</h4>
+            <p>클래스 내부에 만드는 함수</p>
+        </li>
+    </ul>
+
+    <h1>자바스크립트에서 객체를 생성하는 방법</h1>
+    <ul style="list-style: decimal;">
+        <li><h4>객체 리터럴</h4></li>
+        <li><h4>object의 생성자 함수</h4></li>
+        <li><h4>생성자 함수</h4></li>
+        <li><h4>Objcect.create 메소드</h4></li>
+        <li><h4>Class</h4></li>
+    </ul>
+    
+    <script>
+        let number = {
+            num1 : 10,  //프로퍼티
+            num2 : 20,  //프로퍼티
+            sum:function(){ //메소드
+                return this.num1 + this.num2;
+            }
+        }
+
+        //1. 객체 리터럴 이용해서 객체 생성
+        // 객체 리터럴은 유연함,강력함을 갖는 자바스크립트의 대표적인 객체생성 방법.
+        //클래스 정의나 new 연산자 없이 손쉽게 객체를 생성.
+        let person = {
+            uname : '철수',
+            sayHello: function(){
+                console.log(`${this.uname}님이 안녕하세요?라고 말했습니다.`);
+            }
+        }
+        console.log(person.sayHello());
+
+
+        //2. Object() : 생성자 함수.
+        // new 키워드를 이용하여 Object 생성자 함수를 호출하면 비어있는 객체를 얻을 수 있다.
+
+        let person2 = new Object();
+        console.log(person2.name);
+        console.log(person2.email);
+        console.log(person2.birth);
+
+        person2.name = "홍길동";
+        person2.email = "gildong@gamil.com";
+        person2.birth = "1665.12.31";
+
+        console.log(person2.name);
+        console.log(person2.email);
+        console.log(person2.birth);
+
+        //3. 생성자 함수 : 일반함수와 구분하기 위해 첫자를 대문자로 사용
+
+        function Person(name,email,birth){
+            this.name = name;
+            this.email = email;
+            this.birth = birth;
+        }
+
+        const person3 = new Person('안철수','adf@asdi.com', '1955.12.31');
+        console.log(person3.name);
+        console.log(person3.email);
+        console.log(person3.birth);
+
+        //예제) 사람의 평균 몸무게를 점검해주는 생성자 함수를 만들어 보자.
+        // 자신의 몸무게가 (키-100) * 0.9에 +-5 안에 들어가면 정상, 많으면 비만, 적으면 미달 출력
+
+        function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+
+        this.getInfo = function(){
+            let str = `이름 : ${this.userName}, 키 : ${this.userHeight}, 몸무게 ${this.userWeight}`;
+        }
+        this.getResult = function(){
+            this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+            this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+            if(this.userWeight < this.minWeight){
+                return "몸무게 미달";
+            }else if(this.userWeight > this.maxWeight){
+                return "비만";
+            }else{
+                return "정상";
+            }
+        }
+
+        var hong = new CheckWeight('honggil',181,100);
+        console.log(hong.getInfo());
+        console.log(hong.getResult());
+
+        
+    </script>
+</body>
+</html>
