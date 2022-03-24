@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+<style>
+    img{
+        max-width: 100%;
+    }
+    .imgbox{
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ddd;
+        margin: 30px auto;
+    }
+    .imgbigbox{
+        height: 400px;
+    }
+    .imgsmbox{
+        width: 100px;
+        height: 100px;
+        float: left;
+        overflow: hidden;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+    <div class="imgbox">
+        <div class="imgbigbox">
+            <img src="images/t01.jpg" alt="01" id="img">
+        </div>
+
+        <div class="imgsmbox">
+            <img src="images/t01.jpg" alt="01" onclick="timg('t01')">
+        </div>
+        <div class="imgsmbox">
+            <img src="images/t02.jpg" alt="02" onclick="timg('t02')" >
+        </div>
+        <div class="imgsmbox">
+            <img src="images/t03.jpg" alt="03" onclick="timg('t03')">
+        </div>
+    </div>
+
+    <form action="index.html" name="searchForm">
+        <label>성</label><input type="text" name="firstname" id="firstname" onchange="toggletxt()">
+        <label>이름</label><input type="text" name="lastname" id="lastname" disabled value="lastname">
+        <button type="submit">전송</button>
+    </form>
+    
+    <script src="js/gallery.js"></script>
+</body>
+</html>
