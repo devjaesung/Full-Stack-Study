@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치정보</title>
+</head>
+<body>
+    
+    <p id="geolocation"></p>
+    <button onclick="getLocation()">위치정보 받기</button>
+    <script>
+
+        const geo = document.getElementById('geolocation');
+        function getLocation(){
+
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }else{
+                geo.innerHTML = '위치기반 서비스를 허용하지 않음';
+            }
+        }
+
+        function showPosition(position){
+            let lat = position.coords.latitude; //위도
+            let lon = position.coords.longitude; //경도
+            let txt = `당신의 현재 위치는 위도 : ${lat}, 경도 : ${lon} 입니다.`;
+            console.log(txt);
+            geo.innerHTML = txt;
+        }
+       
+    </script>
+</body>
+</html>

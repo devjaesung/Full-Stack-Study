@@ -1,0 +1,9 @@
+
+parentNode
+childNodes[1]
+fisrtChild
+lastChild
+nextSibling
+previousSibling
+
+        1. 새 요소를 만듬

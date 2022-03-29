@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getLocation()">위치정보 받기</button>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    
+
+    <script>
+        const container = document.getElementById('map');
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(kMap);
+            }else{
+                container.innerHTML = '위치기반서비스가 허용되지 않음';
+            }
+        }
+
+        function kMap(position){
+            let options = {
+                center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude), level: 3
+            }
+            let map = new kakao.maps.Map(container.options);
+        }
+
+        window.onload = function(){
+            getLocation();
+        }
+    </script>
+</body>
+</html>

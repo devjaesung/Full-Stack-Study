@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding test</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: thistle;
+            position: relative;
+        }
+        #animate{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="animate"></div>
+    </div>
+    <button onclick="boxMove()">움직이기</button>
+
+    <script>
+        function boxMove(){
+            let id = null;
+            const el = document.getElementById('animate');
+            let pos = 0;
+            id = setInterval(frame,5)
+            function frame(){
+                if(pos == 350){
+                    clearInterval(id);
+                }else{
+                pos++;
+                el.style.top = pos + 'px';
+                el.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
