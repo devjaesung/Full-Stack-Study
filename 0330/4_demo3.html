@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Q : 스크립트를 이용해서 버튼을 누르면 홀수 라인이 해당색으로 바뀌게 하시오.</h1>
+    <ul id="strips">
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>박스3</li>
+        <li>박스4</li>
+        <li>박스5</li>
+        <li>박스6</li>
+    </ul>   
+
+    <button id="pink" onclick="pink()">핑크버튼</button>
+    <button id="blue" onclick="blue()">블루버튼</button>
+    <button id="green" onclick="green()">그린버튼</button>
+
+    <script>
+        'use strict';
+        window.onload = function(){ //jquery로 ready function 쓰는거와 동일
+            document.getElementById('pink').onclick = pink;
+            document.getElementById('blue').onclick = blue;
+            document.getElementById('green').onclick = green;
+        }
+
+        function pink(){
+            let demo = document.getElementsByTagName('li'); //방법1) li태그 받아서 
+            for(let i =0;i < demo.length;i++){              //나머지로 홀수 구하기
+                if(i % 2 == 0){
+                    demo[i].setAttribute('style','background-color:pink');
+                }
+            }
+                }
+
+                function blue(){
+                    let demo2 = document.querySelectorAll('li:nth-child(2n+1)'); //nth-child로 홀수 구하기
+                    for(let i =0;i < demo2.length;i++){
+                    demo2[i].setAttribute('style','background-color:blue');
+            }
+                }
+
+                function green(){
+                    let demo3 = document.querySelectorAll('li:nth-child(odd)'); //odd 사용
+                    for(let i =0;i < demo3.length;i++){
+                    demo3[i].setAttribute('style','background-color:green');
+            }
+                }
+
+    </script>
+</body>
+</html>

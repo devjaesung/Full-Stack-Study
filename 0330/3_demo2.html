@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Q : div 요소 안의 첫 번째 문단을 찾아 노란색으로 배경을 바꾸시오.</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis dui id felis molestie, in sodales nulla faucibus.
+        </p>
+        <p>
+            Donec venenatis maximus elit, finibus varius tortor sollicitudin quis.
+        </p>
+        <p>
+            Donec vulputate quam nulla, sed tempus ipsum vehicula sit amet.
+        </p>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis dui id felis molestie, in sodales nulla faucibus.
+        </p>
+        <p>
+            Donec venenatis maximus elit, finibus varius tortor sollicitudin quis.
+        </p>
+    </div>
+    <div>
+        <ul>
+            <li>목록태그</li>
+            <li>목록태그</li>
+            <li>목록태그</li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis dui id felis molestie, in sodales nulla faucibus.
+        </p>
+        <p>
+            Donec venenatis maximus elit, finibus varius tortor sollicitudin quis.
+        </p>
+    </div>
+
+    <script>
+        let demo = document.querySelectorAll('div p:first-of-type');
+        for(let i =0;i < demo.length;i++){
+            demo[i].setAttribute('style','background-color:yellow');
+        }
+
+        /*
+            first-child : 대상부모의 자식중 첫 번째
+            first-of-type : 대상부모의 자식중 타입이 같은 것들 중 첫 번째
+        */
+    </script>
+</body>
+</html>

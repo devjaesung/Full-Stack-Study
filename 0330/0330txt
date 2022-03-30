@@ -1,0 +1,2 @@
+1. JSON.parse() -> json타입을 object 타입으로 바꿔줌
+2. JSON.stringify() -> object타입을 json타입으로 바꿔줌

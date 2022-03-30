@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form" id="form">
+        <div>
+            <label><input type="checkbox" name="ch01" value="1" checked>인증합니다.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="ch02" value="1">인증합니다.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="ch03" value="1" checked>인증합니다.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="ch04" value="1">인증합니다.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="ch05" value="1" checked>인증합니다.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="ch06" value="1">인증합니다.</label>
+        </div>
+    </form>
+
+    <script>
+        'use strict';
+        //방법1)
+        let str1 = '';
+        let checked = document.querySelectorAll("#form input[type = 'checkbox']:checked");
+        for(let i = 0; i < checked.length; i++){
+            str1 += checked[i].name + '';
+        }
+        console.log(str1);
+
+        //방법2)
+        let str2 = '';
+        let inputs = document.querySelectorAll('#form input');
+        for(let i = 0; i < inputs.length; i++){
+            if(inputs.item(i).type == 'checkbox' && inputs.item(i).checked){
+                str2 += inputs.item(i).name + "";
+            }
+        }
+        console.log(str2);
+    </script>
+</body>
+</html>

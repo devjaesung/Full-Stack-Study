@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center">Member List</h1>
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        //json을 활용하면 리스트의 추가,삭제가 수월해짐.
+        let mlist = '';
+        fetch('member.json') //member.json 경로 받기
+        .then(resolve => resolve.json())
+        .then(rs => {
+            console.log(rs);
+
+            for(let x of rs.memberlist){ //memberlsit에서 하나씩 뽑아서 x에 저장! 
+                mlist += `<tr><td>${x.name}</td><td>${x.age}</td><td>${x.city}</td></tr>`;
+            }
+            document.getElementById('tbody').innerHTML = mlist;
+        });
+    </script>
+</body>
+</html>

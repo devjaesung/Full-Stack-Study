@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" class="demo">
+        <p>text1</p>
+        <p>text2</p>
+    </div>
+
+    <script>
+        let demo = document.getElementById('demo');
+        let parent = demo.parentNode; //부모는 parentNode 속성을 통해 접근
+        let children = demo.childNodes; //자식은 childNodes 속성을 통해 접근
+        let outputString = ''; //빈 값을 넣지 않으면 undefined 출력됨..
+
+        if(demo.hasChildNodes()){
+            for(let i=0; i<children.length; i++){
+                outputString += 'demo의 자식노드' + children[i].nodeName + '\n'; //nodeName을 통해 속성을 확인할 수 있음, '\n' == <br>
+            }
+            console.log(outputString); //총 5개가 찍힘.
+        }
+
+        //원하는 요소만 얻고 싶을 때
+        // if(demo.hasChildNodes()){
+        //     for(let i=0; i<children.length; i++){
+
+        //         if(children[i].nodeName == '#text'){ 
+        //             continue;
+        //         }
+        //         outputString += 'demo의 자식노드' + children[i].nodeName + '\n'; 
+        //     }
+        //     console.log(outputString); //총 2개가 찍힘.
+        // }
+    </script>
+</body>
+</html>

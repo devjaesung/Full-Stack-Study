@@ -1,0 +1,10 @@
+{
+    "memberlist" : [
+        {"name":"John", "age":30, "city":"NewYork"},
+        {"name":"Sam", "age":28, "city":"Seoul"},
+        {"name":"Tony", "age":25, "city":"Los Angeles"},
+        {"name":"Mark", "age":37, "city":"Tokyo"},
+        {"name":"Kein", "age":46, "city":"London"},
+        {"name":"Max", "age":16, "city":"Texas"}
+    ]
+}
