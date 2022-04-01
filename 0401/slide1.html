@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        h2{
+            text-align: center;
+        }
+        .slide{
+            width: 600px;
+            position: relative;
+            margin: auto;
+        }
+        .slides{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+       
+        #counter{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 600px;
+            margin: auto;
+            margin: 5px auto 50px;
+        }
+        #counter li{
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #bbb;
+            transition: all 0.5s ease;
+        }
+        #counter li.active, #counter li:hover{
+            background-color: #777;
+        }
+        .fade{
+            animation: fade, 1.5s;
+        }
+        .crumbtext{
+            color: #f3f3f3;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 18px;
+            margin-top: -22px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 40px;
+            border-radius: 0 5px 5px 0;
+            user-select: none; /*?*/
+        }
+        .next{
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+        .prev:hover, .next:hover{
+            background-color: rgba(0,0,0,.85);
+        }
+        a,a:link{
+            text-decoration: none;
+        }
+        .text{
+            color: #fff;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 9px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @keyframes fade {
+            from {opacity: .2}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SlideShow Gallery</h2>
+        <div class="slide">
+            <div class="slides fade">
+                <div class="crumbtext">1 / 3</div>
+                <img src="images/001.jpg" alt="001">
+                <p class="text">Brown Dog</p>
+            </div>
+            <div class="slides fade">
+                <div class="crumbtext">2 / 3</div>
+                <img src="images/002.jpg" alt="002">
+                <p class="text">pets</p>
+            </div>
+            <div class="slides fade">
+                <div class="crumbtext">3 / 3</div>
+                <img src="images/003.jpg" alt="003">
+                <p class="text">Light Brown Dog</p>
+            </div>
+            <a href="javascript:void(0)" class="prev" onclick="pgSlice(-1)">‹</a>
+            <a href="javascript:void(0)" class="next" onclick="pgSlice(1)">›</a>
+        </div>
+       
+    </div>
+
+
+
+    <ul id="counter">
+        <li class="active" onclick="pSlide(1)"></li>
+        <li onclick="pSlide(2)"></li>
+        <li onclick="pSlide(3)"></li>
+    </ul>
+    <script>
+        let slideIndex = 1;
+        mySlide(slideIndex);
+       
+        function pSlide(n){
+            mySlide(slideIndex=n);
+        }
+
+        function mySlide(n){
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dot = document.getElementById("counter").children;
+
+            if(n > slides.length) {slideIndex = 1}
+            if(n < 1) {slideIndex = slides.length}
+            for(i=0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            // slideIndex++;
+            for(i=0; i < dot.length; i++){
+                dot[i].className = dot[i].className.replace("active","")
+            }
+            slides[slideIndex-1].style.display = "block";
+            dot[slideIndex-1].className = "active";
+            
+        }
+    </script>
+</body>
+</html>

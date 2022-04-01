@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<catalog>
+    <cd>
+        <title>What Happened To Virgil</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>We Go Up</title>
+        <artist>Nicki Minaj</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>City of Gods</title>
+        <artist>Kanye West</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Soy El Único</title>
+        <artist>Yahritza Y Su Esencia</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>No Interviews</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Banking On Me</title>
+        <artist>Gunna</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Pretty Too</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Remember</title>
+        <artist>Pop Smoke,Nigo</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Barbarian</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Smoking Thinking</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+</catalog>

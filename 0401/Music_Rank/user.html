@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            margin: 30px auto;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #999;
+        }
+        td{
+            padding: 5px 15px;
+            border: 1px solid #999;
+        }
+   
+    </style>
+</head>
+<body>
+    <button type="button" onclick="loadDoc(1)">Daily Top10</button>
+    <button type="button" onclick="loadDoc(2)">Weekly Top10</button>
+    <button type="button" onclick="loadDoc(3)">Monthly Top10</button>
+    
+    <div class="contianer">
+        <table id="top10"></table>
+    </div>
+    <script>
+        /*
+            1.XMLHTTPRequest의 객체를 생성
+            2. 콜백 함수 정의
+            3. XMLHttpRequest의 객체 열기
+            4. 서버에 요청 보내기
+        */
+        function loadDoc(e){
+            const xhttp = new XMLHttpRequest(); // 1.XMLHttpRequest 생성
+            xhttp.onload = function(){
+                myFunc(this);
+            }
+            let url;
+            if(e == 1){
+                url = "user_day.xml";
+            }else if(e == 2){
+                url = "user_week.xml";
+            }else{
+                url = "user_month.xml";
+            }
+            xhttp.open("GET",url);
+            xhttp.send();
+        }
+
+        function myFunc(xml){
+            const xmlDoc = xml.responseXML;
+            const cd = xmlDoc.getElementsByTagName("cd");
+            let tbl = "<tr><th>Ranking</th><th>Title</th><th>Artist</th><th>Price</th><th>Year</th></tr>";
+            for(let i = 0; i < cd.length; i++){
+                tbl += `<tr><td>
+                        ${i + 1}
+                        </td><td>
+                        ${cd[i].getElementsByTagName("title")[0].childNodes[0].nodeValue}
+                        </td><td>
+                        ${cd[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue}         
+                       </td><td>                 
+                        ${cd[i].getElementsByTagName("price")[0].childNodes[0].nodeValue}
+                        </td><td>
+                        ${cd[i].getElementsByTagName("year")[0].childNodes[0].nodeValue}
+                        </td>                
+                        </tr>
+                    `;
+            }
+            document.getElementById("top10").innerHTML = tbl;
+        }
+    </script>
+</body>
+</html>

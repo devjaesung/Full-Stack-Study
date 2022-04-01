@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<catalog>
+    <cd>
+        <title>MAMIIII</title>
+        <artist>Becky G., KAROL G</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>We Go Up</title>
+        <artist>Nicki Minaj</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Vete</title>
+        <artist>Bad Bunny</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>No Le Aflojo</title>
+        <artist>Los Gemelos De Sinaloa</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Come On, Let's Go</title>
+        <artist>Tyler, Nigo</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Best I Ever Had</title>
+        <artist>Drake</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Yonaguni</title>
+        <artist>Bad Bunny</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Remember</title>
+        <artist>Pop Smoke,Nigo</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+     <cd>
+        <title>Envolver</title>
+        <artist>Anitta</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <title>Smoking Thinking</title>
+        <artist>Lil Durk</artist>
+        <price>¢30</price>
+        <year>2022</year>
+    </cd>
+</catalog>
