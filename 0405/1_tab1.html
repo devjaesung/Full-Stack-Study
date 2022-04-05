@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            margin: 30px auto;
+        }
+        .tab{
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button{
+            float: left;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            transition: all .3s;
+        }
+        .tab button:hover, button.active{
+            background-color: #ddd;
+        }
+        .tabcontent{
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="tab">
+        <button class="tablinks active" onclick="tabOpen(event,'a')" id="open">Open A</button>
+        <button class="tablinks"onclick="tabOpen(event,'b')">Open B</button>
+        <button class="tablinks"onclick="tabOpen(event,'c')">Open C</button>
+    </div>
+    <div id="a" class="tabcontent">
+        <h1>AA</h1>
+        <p>AAAA</p>
+    </div>
+    <div id="b" class="tabcontent">
+        <h1>BB</h1>
+        <p>BBBB</p>
+    </div>
+    <div id="c" class="tabcontent">
+        <h1>CC</h1>
+        <p>CCCC</p>
+    </div>
+</div>
+    <script>
+        function tabOpen(e,uid){
+            let i;
+            const tabcontent = document.getElementsByClassName('tabcontent');
+            const tablink = document.getElementsByClassName('tablinks');
+            
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display = 'none'; /*탭컨텐츠 처음에 안보이게 처리*/
+            }
+            for(i=0; i < tablink.length; i++){
+                tablink[i].classList.remove("active"); //active 제거하는 작업
+            }
+            document.getElementById(uid).style.display = "block"; //uid값 들어온 탭 보이게 처리
+            e.currentTarget.classList.add("active"); //현재 타겟된 클래스에 active 추가
+        }
+        document.getElementById("open").click();
+        
+    </script>
+</body>
+</html>

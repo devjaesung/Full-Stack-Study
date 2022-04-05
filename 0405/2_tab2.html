@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            border: 1px solid #999;
+        }
+        .tab{
+            width: 120px;
+            height: 300px;
+            display: flex;
+            flex-flow: column;
+            background-color: #777;
+            border-right: 1px solid #999;
+        }
+        button{
+            border: none;
+            width: 120px;height: 50px;
+            background-color: #ddd;
+        }
+        button:hover{
+            background-color: #aaa;
+        }
+        .contents{
+            width: 350px; height: 300px;
+            margin-left: 20px;
+            position: relative;
+        }
+        .tabcontent{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        h1,p{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <button class="tablinks active" onclick="tabOpen(event,'a')" id="open">Open A</button>
+            <button class="tablinks"onclick="tabOpen(event,'b')">Open B</button>
+            <button class="tablinks"onclick="tabOpen(event,'c')">Open C</button>
+        </div>
+        <div class="contents">
+        <div id="a" class="tabcontent">
+            <h1>AA</h1>
+            <p>AAAA</p>
+        </div>
+        <div id="b" class="tabcontent">
+            <h1>BB</h1>
+            <p>BBBB</p>
+        </div>
+        <div id="c" class="tabcontent">
+            <h1>CC</h1>
+            <p>CCCC</p>
+        </div>
+        </div>
+    </div>
+    <script>
+        function tabOpen(e,uid){
+            let i;
+            const tabcontent = document.getElementsByClassName('tabcontent');
+            const tablink = document.getElementsByClassName('tablinks');
+            
+            for(i=0;i<tabcontent.length;i++){
+                tabcontent[i].style.display = 'none'; /*탭컨텐츠 처음에 안보이게 처리*/
+            }
+            for(i=0; i < tablink.length; i++){
+                tablink[i].classList.remove("active"); //active 제거하는 작업
+            }
+            document.getElementById(uid).style.display = "block"; //uid값 들어온 탭 보이게 처리
+            e.currentTarget.classList.add("active"); //현재 타겟된 클래스에 active 추가
+        }
+        document.getElementById("open").click();
+        
+    </script>
+</body>
+</html>
